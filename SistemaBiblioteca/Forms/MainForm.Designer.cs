@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             LateralPanel = new Panel();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            BtnReports = new FontAwesome.Sharp.IconButton();
+            BtnDevolutions = new FontAwesome.Sharp.IconButton();
             BtnUsers = new FontAwesome.Sharp.IconButton();
             BtnBooks = new FontAwesome.Sharp.IconButton();
             IconPanel = new Panel();
@@ -44,8 +44,9 @@
             // 
             // LateralPanel
             // 
-            LateralPanel.Controls.Add(iconButton1);
-            LateralPanel.Controls.Add(iconButton2);
+            LateralPanel.BorderStyle = BorderStyle.FixedSingle;
+            LateralPanel.Controls.Add(BtnReports);
+            LateralPanel.Controls.Add(BtnDevolutions);
             LateralPanel.Controls.Add(BtnUsers);
             LateralPanel.Controls.Add(BtnBooks);
             LateralPanel.Controls.Add(IconPanel);
@@ -55,42 +56,42 @@
             LateralPanel.Size = new Size(358, 630);
             LateralPanel.TabIndex = 0;
             // 
-            // iconButton1
+            // BtnReports
             // 
-            iconButton1.Dock = DockStyle.Top;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Popup;
-            iconButton1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            iconButton1.IconSize = 60;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(0, 470);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(358, 73);
-            iconButton1.TabIndex = 4;
-            iconButton1.Text = "Reportes";
-            iconButton1.UseVisualStyleBackColor = true;
+            BtnReports.Dock = DockStyle.Top;
+            BtnReports.FlatAppearance.BorderSize = 0;
+            BtnReports.FlatStyle = FlatStyle.Popup;
+            BtnReports.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnReports.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            BtnReports.IconColor = Color.Black;
+            BtnReports.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            BtnReports.IconSize = 60;
+            BtnReports.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnReports.Location = new Point(0, 470);
+            BtnReports.Name = "BtnReports";
+            BtnReports.Size = new Size(356, 73);
+            BtnReports.TabIndex = 4;
+            BtnReports.Text = "Reportes";
+            BtnReports.UseVisualStyleBackColor = true;
             // 
-            // iconButton2
+            // BtnDevolutions
             // 
-            iconButton2.Dock = DockStyle.Top;
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatStyle = FlatStyle.Popup;
-            iconButton2.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.HandsHolding;
-            iconButton2.IconColor = Color.Black;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            iconButton2.IconSize = 60;
-            iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(0, 397);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(358, 73);
-            iconButton2.TabIndex = 3;
-            iconButton2.Text = "Prestamos y Devoluciones";
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.UseVisualStyleBackColor = true;
+            BtnDevolutions.Dock = DockStyle.Top;
+            BtnDevolutions.FlatAppearance.BorderSize = 0;
+            BtnDevolutions.FlatStyle = FlatStyle.Popup;
+            BtnDevolutions.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnDevolutions.IconChar = FontAwesome.Sharp.IconChar.HandsHolding;
+            BtnDevolutions.IconColor = Color.Black;
+            BtnDevolutions.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            BtnDevolutions.IconSize = 60;
+            BtnDevolutions.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnDevolutions.Location = new Point(0, 397);
+            BtnDevolutions.Name = "BtnDevolutions";
+            BtnDevolutions.Size = new Size(356, 73);
+            BtnDevolutions.TabIndex = 3;
+            BtnDevolutions.Text = "Prestamos y Devoluciones";
+            BtnDevolutions.TextAlign = ContentAlignment.MiddleRight;
+            BtnDevolutions.UseVisualStyleBackColor = true;
             // 
             // BtnUsers
             // 
@@ -105,7 +106,7 @@
             BtnUsers.ImageAlign = ContentAlignment.MiddleLeft;
             BtnUsers.Location = new Point(0, 324);
             BtnUsers.Name = "BtnUsers";
-            BtnUsers.Size = new Size(358, 73);
+            BtnUsers.Size = new Size(356, 73);
             BtnUsers.TabIndex = 2;
             BtnUsers.Text = "Usuarios";
             BtnUsers.UseVisualStyleBackColor = true;
@@ -123,7 +124,7 @@
             BtnBooks.ImageAlign = ContentAlignment.MiddleLeft;
             BtnBooks.Location = new Point(0, 251);
             BtnBooks.Name = "BtnBooks";
-            BtnBooks.Size = new Size(358, 73);
+            BtnBooks.Size = new Size(356, 73);
             BtnBooks.TabIndex = 1;
             BtnBooks.Text = "Libros";
             BtnBooks.UseVisualStyleBackColor = true;
@@ -134,7 +135,7 @@
             IconPanel.Dock = DockStyle.Top;
             IconPanel.Location = new Point(0, 0);
             IconPanel.Name = "IconPanel";
-            IconPanel.Size = new Size(358, 251);
+            IconPanel.Size = new Size(356, 251);
             IconPanel.TabIndex = 0;
             // 
             // LogoPicture
@@ -143,7 +144,7 @@
             LogoPicture.Image = Properties.Resources.PuertaAMilMundosLogo;
             LogoPicture.Location = new Point(0, 0);
             LogoPicture.Name = "LogoPicture";
-            LogoPicture.Size = new Size(358, 251);
+            LogoPicture.Size = new Size(356, 251);
             LogoPicture.SizeMode = PictureBoxSizeMode.StretchImage;
             LogoPicture.TabIndex = 0;
             LogoPicture.TabStop = false;
@@ -167,7 +168,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Pagina Principal";
             WindowState = FormWindowState.Maximized;
             LateralPanel.ResumeLayout(false);
             IconPanel.ResumeLayout(false);
@@ -182,8 +183,8 @@
         private Panel IconPanel;
         private PictureBox LogoPicture;
         private FontAwesome.Sharp.IconButton BtnBooks;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton BtnDevolutions;
         private FontAwesome.Sharp.IconButton BtnUsers;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BtnReports;
     }
 }

@@ -28,73 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            IconoPanel = new Panel();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
+            IconPanel = new Panel();
+            PicLogo = new PictureBox();
+            LblWelcome = new Label();
             MainPanel = new Panel();
             LblErrorPassword = new Label();
             LblErrorUserName = new Label();
-            panel2 = new Panel();
-            panel1 = new Panel();
+            PasswordPanel = new Panel();
+            UsernamePanel = new Panel();
             BtnHelp = new FontAwesome.Sharp.IconButton();
             BtnCancel = new Button();
             BtnAccept = new Button();
-            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            PicPassword = new FontAwesome.Sharp.IconPictureBox();
+            PicUsername = new FontAwesome.Sharp.IconPictureBox();
             TxtUserName = new TextBox();
             TxtPassword = new TextBox();
-            IconoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            IconPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PicLogo).BeginInit();
             MainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PicPassword).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PicUsername).BeginInit();
             SuspendLayout();
             // 
-            // IconoPanel
+            // IconPanel
             // 
-            IconoPanel.Controls.Add(pictureBox1);
-            IconoPanel.Dock = DockStyle.Top;
-            IconoPanel.Location = new Point(0, 0);
-            IconoPanel.Name = "IconoPanel";
-            IconoPanel.Size = new Size(455, 161);
-            IconoPanel.TabIndex = 0;
+            IconPanel.Controls.Add(PicLogo);
+            IconPanel.Dock = DockStyle.Top;
+            IconPanel.Location = new Point(0, 0);
+            IconPanel.Name = "IconPanel";
+            IconPanel.Size = new Size(455, 161);
+            IconPanel.TabIndex = 0;
             // 
-            // pictureBox1
+            // PicLogo
             // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.PuertaAMilMundosLogo;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(455, 161);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            PicLogo.BackColor = Color.White;
+            PicLogo.Dock = DockStyle.Fill;
+            PicLogo.Image = Properties.Resources.PuertaAMilMundosLogo;
+            PicLogo.Location = new Point(0, 0);
+            PicLogo.Name = "PicLogo";
+            PicLogo.Size = new Size(455, 161);
+            PicLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            PicLogo.TabIndex = 0;
+            PicLogo.TabStop = false;
             // 
-            // label1
+            // LblWelcome
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Cambria", 24F, FontStyle.Bold);
-            label1.Location = new Point(66, 3);
-            label1.Name = "label1";
-            label1.Size = new Size(323, 37);
-            label1.TabIndex = 1;
-            label1.Text = "Bienvenido de Nuevo";
+            LblWelcome.AutoSize = true;
+            LblWelcome.Font = new Font("Cambria", 24F, FontStyle.Bold);
+            LblWelcome.Location = new Point(66, 3);
+            LblWelcome.Name = "LblWelcome";
+            LblWelcome.Size = new Size(323, 37);
+            LblWelcome.TabIndex = 1;
+            LblWelcome.Text = "Bienvenido de Nuevo";
             // 
             // MainPanel
             // 
             MainPanel.Controls.Add(LblErrorPassword);
             MainPanel.Controls.Add(LblErrorUserName);
-            MainPanel.Controls.Add(panel2);
-            MainPanel.Controls.Add(panel1);
+            MainPanel.Controls.Add(PasswordPanel);
+            MainPanel.Controls.Add(UsernamePanel);
             MainPanel.Controls.Add(BtnHelp);
             MainPanel.Controls.Add(BtnCancel);
             MainPanel.Controls.Add(BtnAccept);
-            MainPanel.Controls.Add(iconPictureBox2);
-            MainPanel.Controls.Add(iconPictureBox1);
+            MainPanel.Controls.Add(PicPassword);
+            MainPanel.Controls.Add(PicUsername);
             MainPanel.Controls.Add(TxtUserName);
             MainPanel.Controls.Add(TxtPassword);
-            MainPanel.Controls.Add(label1);
+            MainPanel.Controls.Add(LblWelcome);
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(0, 161);
             MainPanel.Name = "MainPanel";
@@ -123,21 +123,21 @@
             LblErrorUserName.Text = "label2";
             LblErrorUserName.Visible = false;
             // 
-            // panel2
+            // PasswordPanel
             // 
-            panel2.BackColor = Color.Black;
-            panel2.Location = new Point(70, 169);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(377, 1);
-            panel2.TabIndex = 8;
+            PasswordPanel.BackColor = Color.Black;
+            PasswordPanel.Location = new Point(70, 169);
+            PasswordPanel.Name = "PasswordPanel";
+            PasswordPanel.Size = new Size(377, 1);
+            PasswordPanel.TabIndex = 8;
             // 
-            // panel1
+            // UsernamePanel
             // 
-            panel1.BackColor = Color.Black;
-            panel1.Location = new Point(68, 87);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(377, 1);
-            panel1.TabIndex = 7;
+            UsernamePanel.BackColor = Color.Black;
+            UsernamePanel.Location = new Point(68, 87);
+            UsernamePanel.Name = "UsernamePanel";
+            UsernamePanel.Size = new Size(377, 1);
+            UsernamePanel.TabIndex = 7;
             // 
             // BtnHelp
             // 
@@ -182,33 +182,33 @@
             BtnAccept.UseVisualStyleBackColor = false;
             BtnAccept.Click += BtnAccept_Click;
             // 
-            // iconPictureBox2
+            // PicPassword
             // 
-            iconPictureBox2.BackColor = Color.White;
-            iconPictureBox2.ForeColor = SystemColors.ControlText;
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Key;
-            iconPictureBox2.IconColor = SystemColors.ControlText;
-            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.IconSize = 50;
-            iconPictureBox2.Location = new Point(14, 127);
-            iconPictureBox2.Name = "iconPictureBox2";
-            iconPictureBox2.Size = new Size(50, 50);
-            iconPictureBox2.TabIndex = 4;
-            iconPictureBox2.TabStop = false;
+            PicPassword.BackColor = Color.White;
+            PicPassword.ForeColor = SystemColors.ControlText;
+            PicPassword.IconChar = FontAwesome.Sharp.IconChar.Key;
+            PicPassword.IconColor = SystemColors.ControlText;
+            PicPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            PicPassword.IconSize = 50;
+            PicPassword.Location = new Point(14, 127);
+            PicPassword.Name = "PicPassword";
+            PicPassword.Size = new Size(50, 50);
+            PicPassword.TabIndex = 4;
+            PicPassword.TabStop = false;
             // 
-            // iconPictureBox1
+            // PicUsername
             // 
-            iconPictureBox1.BackColor = Color.White;
-            iconPictureBox1.ForeColor = SystemColors.ControlText;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserLarge;
-            iconPictureBox1.IconColor = SystemColors.ControlText;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 50;
-            iconPictureBox1.Location = new Point(12, 45);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(50, 50);
-            iconPictureBox1.TabIndex = 4;
-            iconPictureBox1.TabStop = false;
+            PicUsername.BackColor = Color.White;
+            PicUsername.ForeColor = SystemColors.ControlText;
+            PicUsername.IconChar = FontAwesome.Sharp.IconChar.UserLarge;
+            PicUsername.IconColor = SystemColors.ControlText;
+            PicUsername.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            PicUsername.IconSize = 50;
+            PicUsername.Location = new Point(12, 45);
+            PicUsername.Name = "PicUsername";
+            PicUsername.Size = new Size(50, 50);
+            PicUsername.TabIndex = 4;
+            PicUsername.TabStop = false;
             // 
             // TxtUserName
             // 
@@ -241,7 +241,7 @@
             BackColor = Color.White;
             ClientSize = new Size(455, 452);
             Controls.Add(MainPanel);
-            Controls.Add(IconoPanel);
+            Controls.Add(IconPanel);
             Font = new Font("Cambria", 9F);
             MaximizeBox = false;
             MaximumSize = new Size(471, 491);
@@ -252,30 +252,30 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Iniciar Sesion";
             TopMost = true;
-            IconoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            IconPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)PicLogo).EndInit();
             MainPanel.ResumeLayout(false);
             MainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PicPassword).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PicUsername).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel IconoPanel;
-        private PictureBox pictureBox1;
-        private Label label1;
+        private Panel IconPanel;
+        private PictureBox PicLogo;
+        private Label LblWelcome;
         private Panel MainPanel;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox PicUsername;
         private TextBox TxtUserName;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox PicPassword;
         private TextBox TxtPassword;
         private Button BtnCancel;
         private Button BtnAccept;
         private FontAwesome.Sharp.IconButton BtnHelp;
-        private Panel panel1;
-        private Panel panel2;
+        private Panel UsernamePanel;
+        private Panel PasswordPanel;
         private Label LblErrorUserName;
         private Label LblErrorPassword;
     }
