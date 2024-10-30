@@ -32,15 +32,17 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             MainPanel = new Panel();
+            LblErrorPassword = new Label();
+            LblErrorUserName = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            button2 = new Button();
-            button1 = new Button();
+            BtnHelp = new FontAwesome.Sharp.IconButton();
+            BtnCancel = new Button();
+            BtnAccept = new Button();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            TxtContraseña = new TextBox();
             TxtUserName = new TextBox();
+            TxtPassword = new TextBox();
             IconoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             MainPanel.SuspendLayout();
@@ -81,15 +83,17 @@
             // 
             // MainPanel
             // 
+            MainPanel.Controls.Add(LblErrorPassword);
+            MainPanel.Controls.Add(LblErrorUserName);
             MainPanel.Controls.Add(panel2);
             MainPanel.Controls.Add(panel1);
-            MainPanel.Controls.Add(iconButton1);
-            MainPanel.Controls.Add(button2);
-            MainPanel.Controls.Add(button1);
+            MainPanel.Controls.Add(BtnHelp);
+            MainPanel.Controls.Add(BtnCancel);
+            MainPanel.Controls.Add(BtnAccept);
             MainPanel.Controls.Add(iconPictureBox2);
             MainPanel.Controls.Add(iconPictureBox1);
-            MainPanel.Controls.Add(TxtContraseña);
             MainPanel.Controls.Add(TxtUserName);
+            MainPanel.Controls.Add(TxtPassword);
             MainPanel.Controls.Add(label1);
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(0, 161);
@@ -97,10 +101,32 @@
             MainPanel.Size = new Size(455, 291);
             MainPanel.TabIndex = 1;
             // 
+            // LblErrorPassword
+            // 
+            LblErrorPassword.AutoSize = true;
+            LblErrorPassword.ForeColor = Color.Red;
+            LblErrorPassword.Location = new Point(70, 173);
+            LblErrorPassword.Name = "LblErrorPassword";
+            LblErrorPassword.Size = new Size(39, 14);
+            LblErrorPassword.TabIndex = 10;
+            LblErrorPassword.Text = "label2";
+            LblErrorPassword.Visible = false;
+            // 
+            // LblErrorUserName
+            // 
+            LblErrorUserName.AutoSize = true;
+            LblErrorUserName.ForeColor = Color.Red;
+            LblErrorUserName.Location = new Point(66, 91);
+            LblErrorUserName.Name = "LblErrorUserName";
+            LblErrorUserName.Size = new Size(39, 14);
+            LblErrorUserName.TabIndex = 9;
+            LblErrorUserName.Text = "label2";
+            LblErrorUserName.Visible = false;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Location = new Point(68, 151);
+            panel2.Location = new Point(70, 169);
             panel2.Name = "panel2";
             panel2.Size = new Size(377, 1);
             panel2.TabIndex = 8;
@@ -113,47 +139,48 @@
             panel1.Size = new Size(377, 1);
             panel1.TabIndex = 7;
             // 
-            // iconButton1
+            // BtnHelp
             // 
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Cambria", 14F, FontStyle.Bold);
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Question;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 36;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(12, 227);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(89, 40);
-            iconButton1.TabIndex = 6;
-            iconButton1.Text = "Help";
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.UseVisualStyleBackColor = true;
+            BtnHelp.FlatAppearance.BorderSize = 0;
+            BtnHelp.FlatStyle = FlatStyle.Flat;
+            BtnHelp.Font = new Font("Cambria", 14F, FontStyle.Bold);
+            BtnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
+            BtnHelp.IconColor = Color.Black;
+            BtnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            BtnHelp.IconSize = 36;
+            BtnHelp.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnHelp.Location = new Point(12, 227);
+            BtnHelp.Name = "BtnHelp";
+            BtnHelp.Size = new Size(89, 40);
+            BtnHelp.TabIndex = 6;
+            BtnHelp.Text = "Help";
+            BtnHelp.TextAlign = ContentAlignment.MiddleRight;
+            BtnHelp.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnCancel
             // 
-            button2.BackColor = Color.FromArgb(185, 27, 33);
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Cambria", 10F, FontStyle.Bold);
-            button2.Location = new Point(171, 227);
-            button2.Name = "button2";
-            button2.Size = new Size(133, 40);
-            button2.TabIndex = 5;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = false;
+            BtnCancel.BackColor = Color.FromArgb(185, 27, 33);
+            BtnCancel.FlatStyle = FlatStyle.Popup;
+            BtnCancel.Font = new Font("Cambria", 10F, FontStyle.Bold);
+            BtnCancel.Location = new Point(171, 227);
+            BtnCancel.Name = "BtnCancel";
+            BtnCancel.Size = new Size(133, 40);
+            BtnCancel.TabIndex = 5;
+            BtnCancel.Text = "Cancelar";
+            BtnCancel.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // BtnAccept
             // 
-            button1.BackColor = Color.FromArgb(40, 68, 131);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Cambria", 10F, FontStyle.Bold);
-            button1.Location = new Point(310, 227);
-            button1.Name = "button1";
-            button1.Size = new Size(133, 40);
-            button1.TabIndex = 5;
-            button1.Text = "Aceptar";
-            button1.UseVisualStyleBackColor = false;
+            BtnAccept.BackColor = Color.FromArgb(40, 68, 131);
+            BtnAccept.FlatStyle = FlatStyle.Popup;
+            BtnAccept.Font = new Font("Cambria", 10F, FontStyle.Bold);
+            BtnAccept.Location = new Point(310, 227);
+            BtnAccept.Name = "BtnAccept";
+            BtnAccept.Size = new Size(133, 40);
+            BtnAccept.TabIndex = 5;
+            BtnAccept.Text = "Aceptar";
+            BtnAccept.UseVisualStyleBackColor = false;
+            BtnAccept.Click += BtnAccept_Click;
             // 
             // iconPictureBox2
             // 
@@ -163,7 +190,7 @@
             iconPictureBox2.IconColor = SystemColors.ControlText;
             iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox2.IconSize = 50;
-            iconPictureBox2.Location = new Point(12, 109);
+            iconPictureBox2.Location = new Point(14, 127);
             iconPictureBox2.Name = "iconPictureBox2";
             iconPictureBox2.Size = new Size(50, 50);
             iconPictureBox2.TabIndex = 4;
@@ -183,19 +210,6 @@
             iconPictureBox1.TabIndex = 4;
             iconPictureBox1.TabStop = false;
             // 
-            // TxtContraseña
-            // 
-            TxtContraseña.BorderStyle = BorderStyle.None;
-            TxtContraseña.Font = new Font("Cambria", 18F);
-            TxtContraseña.HideSelection = false;
-            TxtContraseña.Location = new Point(66, 116);
-            TxtContraseña.MaxLength = 12;
-            TxtContraseña.Name = "TxtContraseña";
-            TxtContraseña.PasswordChar = '•';
-            TxtContraseña.PlaceholderText = "Contraseña";
-            TxtContraseña.Size = new Size(377, 29);
-            TxtContraseña.TabIndex = 3;
-            // 
             // TxtUserName
             // 
             TxtUserName.BorderStyle = BorderStyle.None;
@@ -206,6 +220,19 @@
             TxtUserName.PlaceholderText = "Nombre de Usuario";
             TxtUserName.Size = new Size(377, 29);
             TxtUserName.TabIndex = 3;
+            // 
+            // TxtPassword
+            // 
+            TxtPassword.BorderStyle = BorderStyle.None;
+            TxtPassword.Font = new Font("Cambria", 18F);
+            TxtPassword.HideSelection = false;
+            TxtPassword.Location = new Point(68, 134);
+            TxtPassword.MaxLength = 12;
+            TxtPassword.Name = "TxtPassword";
+            TxtPassword.PasswordChar = '•';
+            TxtPassword.PlaceholderText = "Contraseña";
+            TxtPassword.Size = new Size(377, 29);
+            TxtPassword.TabIndex = 3;
             // 
             // Login
             // 
@@ -243,11 +270,13 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private TextBox TxtUserName;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private TextBox TxtContraseña;
-        private Button button2;
-        private Button button1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private TextBox TxtPassword;
+        private Button BtnCancel;
+        private Button BtnAccept;
+        private FontAwesome.Sharp.IconButton BtnHelp;
         private Panel panel1;
         private Panel panel2;
+        private Label LblErrorUserName;
+        private Label LblErrorPassword;
     }
 }
