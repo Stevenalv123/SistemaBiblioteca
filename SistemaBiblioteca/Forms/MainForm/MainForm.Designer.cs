@@ -44,6 +44,7 @@
             // 
             // LateralPanel
             // 
+            LateralPanel.BackColor = Color.White;
             LateralPanel.BorderStyle = BorderStyle.FixedSingle;
             LateralPanel.Controls.Add(BtnReports);
             LateralPanel.Controls.Add(BtnDevolutions);
@@ -58,6 +59,7 @@
             // 
             // BtnReports
             // 
+            BtnReports.BackColor = Color.White;
             BtnReports.Cursor = Cursors.Hand;
             BtnReports.Dock = DockStyle.Top;
             BtnReports.FlatAppearance.BorderSize = 0;
@@ -73,10 +75,11 @@
             BtnReports.Size = new Size(356, 73);
             BtnReports.TabIndex = 4;
             BtnReports.Text = "Reportes";
-            BtnReports.UseVisualStyleBackColor = true;
+            BtnReports.UseVisualStyleBackColor = false;
             // 
             // BtnDevolutions
             // 
+            BtnDevolutions.BackColor = Color.White;
             BtnDevolutions.Cursor = Cursors.Hand;
             BtnDevolutions.Dock = DockStyle.Top;
             BtnDevolutions.FlatAppearance.BorderSize = 0;
@@ -93,10 +96,11 @@
             BtnDevolutions.TabIndex = 3;
             BtnDevolutions.Text = "Prestamos y Devoluciones";
             BtnDevolutions.TextAlign = ContentAlignment.MiddleRight;
-            BtnDevolutions.UseVisualStyleBackColor = true;
+            BtnDevolutions.UseVisualStyleBackColor = false;
             // 
             // BtnUsers
             // 
+            BtnUsers.BackColor = Color.White;
             BtnUsers.Cursor = Cursors.Hand;
             BtnUsers.Dock = DockStyle.Top;
             BtnUsers.FlatAppearance.BorderSize = 0;
@@ -112,11 +116,12 @@
             BtnUsers.Size = new Size(356, 73);
             BtnUsers.TabIndex = 2;
             BtnUsers.Text = "Usuarios";
-            BtnUsers.UseVisualStyleBackColor = true;
+            BtnUsers.UseVisualStyleBackColor = false;
             BtnUsers.Click += ShowUsers;
             // 
             // BtnBooks
             // 
+            BtnBooks.BackColor = Color.White;
             BtnBooks.Cursor = Cursors.Hand;
             BtnBooks.Dock = DockStyle.Top;
             BtnBooks.FlatAppearance.BorderSize = 0;
@@ -132,7 +137,8 @@
             BtnBooks.Size = new Size(356, 73);
             BtnBooks.TabIndex = 1;
             BtnBooks.Text = "Libros";
-            BtnBooks.UseVisualStyleBackColor = true;
+            BtnBooks.UseVisualStyleBackColor = false;
+            BtnBooks.Click += ShowBooks;
             // 
             // IconPanel
             // 
@@ -175,6 +181,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pagina Principal";
             WindowState = FormWindowState.Maximized;
+            FormClosing += Exit;
             LateralPanel.ResumeLayout(false);
             IconPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)LogoPicture).EndInit();

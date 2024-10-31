@@ -162,7 +162,8 @@
             // 
             BtnCancel.BackColor = Color.FromArgb(185, 27, 33);
             BtnCancel.Cursor = Cursors.Hand;
-            BtnCancel.FlatStyle = FlatStyle.Popup;
+            BtnCancel.FlatAppearance.BorderSize = 0;
+            BtnCancel.FlatStyle = FlatStyle.Flat;
             BtnCancel.Font = new Font("Cambria", 10F, FontStyle.Bold);
             BtnCancel.ForeColor = Color.White;
             BtnCancel.Location = new Point(171, 227);
@@ -171,12 +172,14 @@
             BtnCancel.TabIndex = 5;
             BtnCancel.Text = "Cancelar";
             BtnCancel.UseVisualStyleBackColor = false;
+            BtnCancel.Click += BtnCancel_Click;
             // 
             // BtnAccept
             // 
             BtnAccept.BackColor = Color.FromArgb(40, 68, 131);
             BtnAccept.Cursor = Cursors.Hand;
-            BtnAccept.FlatStyle = FlatStyle.Popup;
+            BtnAccept.FlatAppearance.BorderSize = 0;
+            BtnAccept.FlatStyle = FlatStyle.Flat;
             BtnAccept.Font = new Font("Cambria", 10F, FontStyle.Bold);
             BtnAccept.ForeColor = Color.White;
             BtnAccept.Location = new Point(310, 227);

@@ -11,11 +11,18 @@
         {
             if (ValidateFields())
             {
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
                 this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.FormClosed += (s, args) => this.Close();
+                mainForm.Show();
             }
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         private bool ValidateFields()
         {
@@ -31,7 +38,7 @@
             {
                 LblErrorUserName.Visible = false;
             }
-            
+
             if (string.IsNullOrWhiteSpace(TxtPassword.Text))
             {
                 LblErrorUserName.Visible = false;
