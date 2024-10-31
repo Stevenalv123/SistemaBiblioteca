@@ -58,6 +58,7 @@
             // 
             // BtnReports
             // 
+            BtnReports.Cursor = Cursors.Hand;
             BtnReports.Dock = DockStyle.Top;
             BtnReports.FlatAppearance.BorderSize = 0;
             BtnReports.FlatStyle = FlatStyle.Popup;
@@ -76,6 +77,7 @@
             // 
             // BtnDevolutions
             // 
+            BtnDevolutions.Cursor = Cursors.Hand;
             BtnDevolutions.Dock = DockStyle.Top;
             BtnDevolutions.FlatAppearance.BorderSize = 0;
             BtnDevolutions.FlatStyle = FlatStyle.Popup;
@@ -95,6 +97,7 @@
             // 
             // BtnUsers
             // 
+            BtnUsers.Cursor = Cursors.Hand;
             BtnUsers.Dock = DockStyle.Top;
             BtnUsers.FlatAppearance.BorderSize = 0;
             BtnUsers.FlatStyle = FlatStyle.Popup;
@@ -110,9 +113,11 @@
             BtnUsers.TabIndex = 2;
             BtnUsers.Text = "Usuarios";
             BtnUsers.UseVisualStyleBackColor = true;
+            BtnUsers.Click += ShowUsers;
             // 
             // BtnBooks
             // 
+            BtnBooks.Cursor = Cursors.Hand;
             BtnBooks.Dock = DockStyle.Top;
             BtnBooks.FlatAppearance.BorderSize = 0;
             BtnBooks.FlatStyle = FlatStyle.Popup;

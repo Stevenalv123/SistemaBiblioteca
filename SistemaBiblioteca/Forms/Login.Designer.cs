@@ -141,6 +141,7 @@
             // 
             // BtnHelp
             // 
+            BtnHelp.Cursor = Cursors.Hand;
             BtnHelp.FlatAppearance.BorderSize = 0;
             BtnHelp.FlatStyle = FlatStyle.Flat;
             BtnHelp.Font = new Font("Cambria", 14F, FontStyle.Bold);
@@ -151,7 +152,7 @@
             BtnHelp.ImageAlign = ContentAlignment.MiddleLeft;
             BtnHelp.Location = new Point(12, 227);
             BtnHelp.Name = "BtnHelp";
-            BtnHelp.Size = new Size(89, 40);
+            BtnHelp.Size = new Size(99, 40);
             BtnHelp.TabIndex = 6;
             BtnHelp.Text = "Help";
             BtnHelp.TextAlign = ContentAlignment.MiddleRight;
@@ -160,8 +161,10 @@
             // BtnCancel
             // 
             BtnCancel.BackColor = Color.FromArgb(185, 27, 33);
+            BtnCancel.Cursor = Cursors.Hand;
             BtnCancel.FlatStyle = FlatStyle.Popup;
             BtnCancel.Font = new Font("Cambria", 10F, FontStyle.Bold);
+            BtnCancel.ForeColor = Color.White;
             BtnCancel.Location = new Point(171, 227);
             BtnCancel.Name = "BtnCancel";
             BtnCancel.Size = new Size(133, 40);
@@ -172,8 +175,10 @@
             // BtnAccept
             // 
             BtnAccept.BackColor = Color.FromArgb(40, 68, 131);
+            BtnAccept.Cursor = Cursors.Hand;
             BtnAccept.FlatStyle = FlatStyle.Popup;
             BtnAccept.Font = new Font("Cambria", 10F, FontStyle.Bold);
+            BtnAccept.ForeColor = Color.White;
             BtnAccept.Location = new Point(310, 227);
             BtnAccept.Name = "BtnAccept";
             BtnAccept.Size = new Size(133, 40);
@@ -213,6 +218,7 @@
             // TxtUserName
             // 
             TxtUserName.BorderStyle = BorderStyle.None;
+            TxtUserName.Cursor = Cursors.IBeam;
             TxtUserName.Font = new Font("Cambria", 18F);
             TxtUserName.HideSelection = false;
             TxtUserName.Location = new Point(66, 52);
@@ -224,6 +230,7 @@
             // TxtPassword
             // 
             TxtPassword.BorderStyle = BorderStyle.None;
+            TxtPassword.Cursor = Cursors.IBeam;
             TxtPassword.Font = new Font("Cambria", 18F);
             TxtPassword.HideSelection = false;
             TxtPassword.Location = new Point(68, 134);
