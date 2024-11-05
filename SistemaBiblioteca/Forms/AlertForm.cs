@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace SistemaBiblioteca.Forms
 {
-    public partial class Books : Form
+    public partial class AlertForm : Form
     {
-        public Books()
+        public AlertForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

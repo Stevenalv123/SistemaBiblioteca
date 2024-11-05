@@ -3,16 +3,25 @@ namespace SistemaBiblioteca
 {
     public partial class MainForm:Form
     {
-        private void ShowUsers(object sender, EventArgs e)
+        // Open the form of users
+        private async void ShowUsers(object sender, EventArgs e)
         {
+            if (IsFormOpen(typeof(Users))) return;
+            OpenForm(new LoadingForm());
+            await Task.Run(() => ShowLoading());
             OpenForm(new Users());
         }
 
-        private void ShowBooks(object sender, EventArgs e)
+        // Open the form of books
+        private async void ShowBooks(object sender, EventArgs e)
         {
-            OpenForm(new Books());
+            if (IsFormOpen(typeof(MainFormBooks))) return;
+            OpenForm(new LoadingForm());
+            await Task.Run(() => ShowLoading());
+            OpenForm(new MainFormBooks());
         }
 
+        // Shows a dialog to confirm the exit of the program
         private void Exit(object sender, FormClosingEventArgs e)
         {
             Exit exit = new Exit();

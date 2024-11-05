@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             TopPanel = new Panel();
             SearchPanel = new Panel();
             UsernamePanel = new Panel();
-            BtnSearch = new Button();
             TxtSearch = new TextBox();
             LblUsers = new Label();
             panel1 = new Panel();
@@ -56,6 +55,7 @@
             Cell_PhoneNumber = new DataGridViewTextBoxColumn();
             Cell_Email = new DataGridViewTextBoxColumn();
             Cell_DNI = new DataGridViewTextBoxColumn();
+            pictureBox1 = new PictureBox();
             TopPanel.SuspendLayout();
             SearchPanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -64,6 +64,7 @@
             statusStrip1.SuspendLayout();
             MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgUsers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // TopPanel
@@ -79,8 +80,8 @@
             // 
             // SearchPanel
             // 
+            SearchPanel.Controls.Add(pictureBox1);
             SearchPanel.Controls.Add(UsernamePanel);
-            SearchPanel.Controls.Add(BtnSearch);
             SearchPanel.Controls.Add(TxtSearch);
             SearchPanel.Dock = DockStyle.Right;
             SearchPanel.Location = new Point(475, 0);
@@ -91,25 +92,10 @@
             // UsernamePanel
             // 
             UsernamePanel.BackColor = Color.White;
-            UsernamePanel.Location = new Point(2, 49);
+            UsernamePanel.Location = new Point(111, 49);
             UsernamePanel.Name = "UsernamePanel";
             UsernamePanel.Size = new Size(332, 1);
             UsernamePanel.TabIndex = 8;
-            // 
-            // BtnSearch
-            // 
-            BtnSearch.BackColor = Color.FromArgb(185, 27, 33);
-            BtnSearch.Cursor = Cursors.Hand;
-            BtnSearch.FlatAppearance.BorderSize = 0;
-            BtnSearch.FlatStyle = FlatStyle.Flat;
-            BtnSearch.Font = new Font("Cambria", 10F, FontStyle.Bold);
-            BtnSearch.ForeColor = Color.White;
-            BtnSearch.Location = new Point(340, 15);
-            BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(104, 40);
-            BtnSearch.TabIndex = 6;
-            BtnSearch.Text = "Buscar";
-            BtnSearch.UseVisualStyleBackColor = false;
             // 
             // TxtSearch
             // 
@@ -119,7 +105,7 @@
             TxtSearch.Font = new Font("Cambria", 20F);
             TxtSearch.ForeColor = Color.White;
             TxtSearch.HideSelection = false;
-            TxtSearch.Location = new Point(3, 12);
+            TxtSearch.Location = new Point(112, 17);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Buscar usuario....";
             TxtSearch.Size = new Size(332, 32);
@@ -231,7 +217,7 @@
             MessageReady.BackColor = Color.White;
             MessageReady.ForeColor = Color.Black;
             MessageReady.Name = "MessageReady";
-            MessageReady.Size = new Size(180, 22);
+            MessageReady.Size = new Size(131, 22);
             MessageReady.Text = "¡Todo listo!";
             // 
             // LblMessage
@@ -259,15 +245,15 @@
             dtgUsers.BackgroundColor = Color.White;
             dtgUsers.BorderStyle = BorderStyle.None;
             dtgUsers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Cambria", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.NullValue = "-";
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dtgUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Cambria", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.NullValue = "-";
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgUsers.Columns.AddRange(new DataGridViewColumn[] { Cell_ID, Cell_Name, Cell_Adress, Cell_PhoneNumber, Cell_Email, Cell_DNI });
             dtgUsers.Dock = DockStyle.Fill;
@@ -314,6 +300,16 @@
             Cell_DNI.Name = "Cell_DNI";
             Cell_DNI.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.search;
+            pictureBox1.Location = new Point(58, 16);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(42, 35);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
             // Users
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -340,6 +336,7 @@
             statusStrip1.PerformLayout();
             MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgUsers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -347,7 +344,6 @@
 
         private Panel TopPanel;
         private TextBox TxtSearch;
-        private Button BtnSearch;
         private Label LblUsers;
         private Panel UsernamePanel;
         private Panel SearchPanel;
@@ -371,5 +367,6 @@
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton BtnPrint;
         private ToolStripMenuItem MessageReady;
+        private PictureBox pictureBox1;
     }
 }

@@ -2,7 +2,8 @@
 {
     public partial class MainForm : Form
     {
-        private Form ActiveForm = null;
+        private Form ActiveForm;
+        // Open the form and close the current one
         private void OpenForm(Form ChildForm)
         {
             if (ActiveForm != null) ActiveForm.Close();
@@ -14,6 +15,25 @@
             MainPanel.Tag = ChildForm;
             ChildForm.BringToFront();
             ChildForm.Show();
+        }
+
+        //Show a loading screen
+        private void ShowLoading()
+        {
+            Thread.Sleep(2000);
+        }
+
+        //Check if the form is already open
+        private bool IsFormOpen(Type formType)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == formType)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

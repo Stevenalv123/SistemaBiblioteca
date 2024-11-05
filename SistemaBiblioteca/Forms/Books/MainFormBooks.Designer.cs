@@ -1,6 +1,6 @@
 ﻿namespace SistemaBiblioteca.Forms
 {
-    partial class Books
+    partial class MainFormBooks
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFormBooks));
             MainPanel = new Panel();
             dtgUsers = new DataGridView();
             Cell_ID = new DataGridViewTextBoxColumn();
-            Cell_Name = new DataGridViewTextBoxColumn();
-            Cell_Adress = new DataGridViewTextBoxColumn();
-            Cell_PhoneNumber = new DataGridViewTextBoxColumn();
-            Cell_Email = new DataGridViewTextBoxColumn();
-            Cell_DNI = new DataGridViewTextBoxColumn();
+            Cell_Title = new DataGridViewTextBoxColumn();
+            Cell_Autor = new DataGridViewTextBoxColumn();
+            Cell_ISBN = new DataGridViewTextBoxColumn();
+            Cell_Editorial = new DataGridViewTextBoxColumn();
+            Cell_Year = new DataGridViewTextBoxColumn();
+            Cell_Quantity = new DataGridViewTextBoxColumn();
+            Cell_State = new DataGridViewTextBoxColumn();
             BottomPanel = new Panel();
-            statusStrip1 = new StatusStrip();
+            StatusStripBooks = new StatusStrip();
             BtnMessage = new FontAwesome.Sharp.IconDropDownButton();
             MessageReady = new ToolStripMenuItem();
             LblMessage = new ToolStripStatusLabel();
             panel1 = new Panel();
             ToolBoxUsers = new ToolStrip();
+            BtnAddBook = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
             BtnEdit = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             BtnDelete = new ToolStripButton();
@@ -52,18 +56,20 @@
             BtnPrint = new ToolStripButton();
             TopPanel = new Panel();
             SearchPanel = new Panel();
-            UsernamePanel = new Panel();
-            BtnSearch = new Button();
+            pictureBox1 = new PictureBox();
             TxtSearch = new TextBox();
+            UsernamePanel = new Panel();
             LblUsers = new Label();
+            PrintDialogBooks = new PrintDialog();
             MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgUsers).BeginInit();
             BottomPanel.SuspendLayout();
-            statusStrip1.SuspendLayout();
+            StatusStripBooks.SuspendLayout();
             panel1.SuspendLayout();
             ToolBoxUsers.SuspendLayout();
             TopPanel.SuspendLayout();
             SearchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // MainPanel
@@ -84,17 +90,17 @@
             dtgUsers.BackgroundColor = Color.White;
             dtgUsers.BorderStyle = BorderStyle.None;
             dtgUsers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Cambria", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.NullValue = "-";
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dtgUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Cambria", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.NullValue = "-";
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgUsers.Columns.AddRange(new DataGridViewColumn[] { Cell_ID, Cell_Name, Cell_Adress, Cell_PhoneNumber, Cell_Email, Cell_DNI });
+            dtgUsers.Columns.AddRange(new DataGridViewColumn[] { Cell_ID, Cell_Title, Cell_Autor, Cell_ISBN, Cell_Editorial, Cell_Year, Cell_Quantity, Cell_State });
             dtgUsers.Dock = DockStyle.Fill;
             dtgUsers.Location = new Point(2, 2);
             dtgUsers.Name = "dtgUsers";
@@ -109,55 +115,67 @@
             Cell_ID.Name = "Cell_ID";
             Cell_ID.ReadOnly = true;
             // 
-            // Cell_Name
+            // Cell_Title
             // 
-            Cell_Name.HeaderText = "Nombre";
-            Cell_Name.Name = "Cell_Name";
-            Cell_Name.ReadOnly = true;
+            Cell_Title.HeaderText = "Titulo";
+            Cell_Title.Name = "Cell_Title";
+            Cell_Title.ReadOnly = true;
             // 
-            // Cell_Adress
+            // Cell_Autor
             // 
-            Cell_Adress.HeaderText = "Direccion";
-            Cell_Adress.Name = "Cell_Adress";
-            Cell_Adress.ReadOnly = true;
+            Cell_Autor.HeaderText = "Autor";
+            Cell_Autor.Name = "Cell_Autor";
+            Cell_Autor.ReadOnly = true;
             // 
-            // Cell_PhoneNumber
+            // Cell_ISBN
             // 
-            Cell_PhoneNumber.HeaderText = "Telefono";
-            Cell_PhoneNumber.Name = "Cell_PhoneNumber";
-            Cell_PhoneNumber.ReadOnly = true;
+            Cell_ISBN.HeaderText = "ISBN";
+            Cell_ISBN.Name = "Cell_ISBN";
+            Cell_ISBN.ReadOnly = true;
             // 
-            // Cell_Email
+            // Cell_Editorial
             // 
-            Cell_Email.HeaderText = "Correo Electronico";
-            Cell_Email.Name = "Cell_Email";
-            Cell_Email.ReadOnly = true;
+            Cell_Editorial.HeaderText = "Editorial";
+            Cell_Editorial.Name = "Cell_Editorial";
+            Cell_Editorial.ReadOnly = true;
             // 
-            // Cell_DNI
+            // Cell_Year
             // 
-            Cell_DNI.HeaderText = "Cedula de Identidad";
-            Cell_DNI.Name = "Cell_DNI";
-            Cell_DNI.ReadOnly = true;
+            Cell_Year.HeaderText = "Año de publicacion";
+            Cell_Year.Name = "Cell_Year";
+            Cell_Year.ReadOnly = true;
+            // 
+            // Cell_Quantity
+            // 
+            Cell_Quantity.HeaderText = "Stock";
+            Cell_Quantity.Name = "Cell_Quantity";
+            Cell_Quantity.ReadOnly = true;
+            // 
+            // Cell_State
+            // 
+            Cell_State.HeaderText = "Estado";
+            Cell_State.Name = "Cell_State";
+            Cell_State.ReadOnly = true;
             // 
             // BottomPanel
             // 
-            BottomPanel.Controls.Add(statusStrip1);
+            BottomPanel.Controls.Add(StatusStripBooks);
             BottomPanel.Dock = DockStyle.Bottom;
             BottomPanel.Location = new Point(0, 596);
             BottomPanel.Name = "BottomPanel";
             BottomPanel.Size = new Size(931, 34);
             BottomPanel.TabIndex = 9;
             // 
-            // statusStrip1
+            // StatusStripBooks
             // 
-            statusStrip1.BackColor = Color.FromArgb(40, 68, 131);
-            statusStrip1.Dock = DockStyle.Fill;
-            statusStrip1.Items.AddRange(new ToolStripItem[] { BtnMessage, LblMessage });
-            statusStrip1.Location = new Point(0, 0);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(931, 34);
-            statusStrip1.TabIndex = 4;
-            statusStrip1.Text = "statusStrip1";
+            StatusStripBooks.BackColor = Color.FromArgb(40, 68, 131);
+            StatusStripBooks.Dock = DockStyle.Fill;
+            StatusStripBooks.Items.AddRange(new ToolStripItem[] { BtnMessage, LblMessage });
+            StatusStripBooks.Location = new Point(0, 0);
+            StatusStripBooks.Name = "StatusStripBooks";
+            StatusStripBooks.Size = new Size(931, 34);
+            StatusStripBooks.TabIndex = 4;
+            StatusStripBooks.Text = "statusStrip1";
             // 
             // BtnMessage
             // 
@@ -198,12 +216,27 @@
             // ToolBoxUsers
             // 
             ToolBoxUsers.Dock = DockStyle.Fill;
-            ToolBoxUsers.Items.AddRange(new ToolStripItem[] { BtnEdit, toolStripSeparator1, BtnDelete, toolStripSeparator2, BtnPrint });
+            ToolBoxUsers.Items.AddRange(new ToolStripItem[] { BtnAddBook, toolStripSeparator3, BtnEdit, toolStripSeparator1, BtnDelete, toolStripSeparator2, BtnPrint });
             ToolBoxUsers.Location = new Point(0, 0);
             ToolBoxUsers.Name = "ToolBoxUsers";
             ToolBoxUsers.Size = new Size(931, 42);
             ToolBoxUsers.TabIndex = 0;
             ToolBoxUsers.Text = "toolStrip1";
+            // 
+            // BtnAddBook
+            // 
+            BtnAddBook.Font = new Font("Cambria", 11F, FontStyle.Bold);
+            BtnAddBook.Image = (Image)resources.GetObject("BtnAddBook.Image");
+            BtnAddBook.ImageTransparentColor = Color.Magenta;
+            BtnAddBook.Name = "BtnAddBook";
+            BtnAddBook.Size = new Size(84, 39);
+            BtnAddBook.Text = "Agregar";
+            BtnAddBook.Click += AddNewBook;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 42);
             // 
             // BtnEdit
             // 
@@ -243,6 +276,7 @@
             BtnPrint.Name = "BtnPrint";
             BtnPrint.Size = new Size(92, 39);
             BtnPrint.Text = "Imprimir";
+            BtnPrint.Click += BtnPrint_Click;
             // 
             // TopPanel
             // 
@@ -257,37 +291,24 @@
             // 
             // SearchPanel
             // 
-            SearchPanel.Controls.Add(UsernamePanel);
-            SearchPanel.Controls.Add(BtnSearch);
+            SearchPanel.Controls.Add(pictureBox1);
             SearchPanel.Controls.Add(TxtSearch);
+            SearchPanel.Controls.Add(UsernamePanel);
             SearchPanel.Dock = DockStyle.Right;
             SearchPanel.Location = new Point(475, 0);
             SearchPanel.Name = "SearchPanel";
             SearchPanel.Size = new Size(456, 70);
             SearchPanel.TabIndex = 3;
             // 
-            // UsernamePanel
+            // pictureBox1
             // 
-            UsernamePanel.BackColor = Color.White;
-            UsernamePanel.Location = new Point(2, 49);
-            UsernamePanel.Name = "UsernamePanel";
-            UsernamePanel.Size = new Size(332, 1);
-            UsernamePanel.TabIndex = 8;
-            // 
-            // BtnSearch
-            // 
-            BtnSearch.BackColor = Color.FromArgb(185, 27, 33);
-            BtnSearch.Cursor = Cursors.Hand;
-            BtnSearch.FlatAppearance.BorderSize = 0;
-            BtnSearch.FlatStyle = FlatStyle.Flat;
-            BtnSearch.Font = new Font("Cambria", 10F, FontStyle.Bold);
-            BtnSearch.ForeColor = Color.White;
-            BtnSearch.Location = new Point(340, 15);
-            BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(104, 40);
-            BtnSearch.TabIndex = 6;
-            BtnSearch.Text = "Buscar";
-            BtnSearch.UseVisualStyleBackColor = false;
+            pictureBox1.Image = Properties.Resources.search;
+            pictureBox1.Location = new Point(58, 17);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(42, 35);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
             // 
             // TxtSearch
             // 
@@ -297,11 +318,19 @@
             TxtSearch.Font = new Font("Cambria", 20F);
             TxtSearch.ForeColor = Color.White;
             TxtSearch.HideSelection = false;
-            TxtSearch.Location = new Point(3, 12);
+            TxtSearch.Location = new Point(112, 18);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Buscar libro....";
             TxtSearch.Size = new Size(332, 32);
-            TxtSearch.TabIndex = 4;
+            TxtSearch.TabIndex = 11;
+            // 
+            // UsernamePanel
+            // 
+            UsernamePanel.BackColor = Color.White;
+            UsernamePanel.Location = new Point(111, 50);
+            UsernamePanel.Name = "UsernamePanel";
+            UsernamePanel.Size = new Size(332, 1);
+            UsernamePanel.TabIndex = 12;
             // 
             // LblUsers
             // 
@@ -314,7 +343,11 @@
             LblUsers.TabIndex = 2;
             LblUsers.Text = "Libros";
             // 
-            // Books
+            // PrintDialogBooks
+            // 
+            PrintDialogBooks.UseEXDialog = true;
+            // 
+            // MainFormBooks
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -323,14 +356,14 @@
             Controls.Add(BottomPanel);
             Controls.Add(panel1);
             Controls.Add(TopPanel);
-            Name = "Books";
+            Name = "MainFormBooks";
             Text = "Books";
             MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgUsers).EndInit();
             BottomPanel.ResumeLayout(false);
             BottomPanel.PerformLayout();
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
+            StatusStripBooks.ResumeLayout(false);
+            StatusStripBooks.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ToolBoxUsers.ResumeLayout(false);
@@ -339,6 +372,7 @@
             TopPanel.PerformLayout();
             SearchPanel.ResumeLayout(false);
             SearchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -346,14 +380,8 @@
 
         private Panel MainPanel;
         private DataGridView dtgUsers;
-        private DataGridViewTextBoxColumn Cell_ID;
-        private DataGridViewTextBoxColumn Cell_Name;
-        private DataGridViewTextBoxColumn Cell_Adress;
-        private DataGridViewTextBoxColumn Cell_PhoneNumber;
-        private DataGridViewTextBoxColumn Cell_Email;
-        private DataGridViewTextBoxColumn Cell_DNI;
         private Panel BottomPanel;
-        private StatusStrip statusStrip1;
+        private StatusStrip StatusStripBooks;
         private FontAwesome.Sharp.IconDropDownButton BtnMessage;
         private ToolStripMenuItem MessageReady;
         private ToolStripStatusLabel LblMessage;
@@ -366,9 +394,20 @@
         private ToolStripButton BtnPrint;
         private Panel TopPanel;
         private Panel SearchPanel;
-        private Panel UsernamePanel;
-        private Button BtnSearch;
-        private TextBox TxtSearch;
         private Label LblUsers;
+        private PictureBox pictureBox1;
+        private TextBox TxtSearch;
+        private Panel UsernamePanel;
+        private DataGridViewTextBoxColumn Cell_ID;
+        private DataGridViewTextBoxColumn Cell_Title;
+        private DataGridViewTextBoxColumn Cell_Autor;
+        private DataGridViewTextBoxColumn Cell_ISBN;
+        private DataGridViewTextBoxColumn Cell_Editorial;
+        private DataGridViewTextBoxColumn Cell_Year;
+        private DataGridViewTextBoxColumn Cell_Quantity;
+        private DataGridViewTextBoxColumn Cell_State;
+        private PrintDialog PrintDialogBooks;
+        private ToolStripButton BtnAddBook;
+        private ToolStripSeparator toolStripSeparator3;
     }
 }
