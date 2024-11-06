@@ -15,7 +15,20 @@ namespace SistemaBiblioteca.Forms.Books
         public AddBooks()
         {
             InitializeComponent();
+            List<string> usStates = new List<string>();
+            usStates.Add("Alaska");
+            usStates.Add("Arizona");
+            usStates.Add("Arkansas");
+            usStates.Add("California");
+            usStates.Add("Colorado");
+            usStates.Add("Connecticut");
+            usStates.Add("Delaware");
+            usStates.Add("Florida");
+            usStates.Add("Georgia");
+            sfComboBox1.DataSource = usStates;
+
         }
+
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
@@ -29,6 +42,34 @@ namespace SistemaBiblioteca.Forms.Books
             this.Close();
         }
 
-        
+        private void maskedTextBox2_Enter(object sender, EventArgs e)
+        {
+            maskedTextBox2.SelectionStart = 0;
+        }
+
+        private void maskedTextBox1_Enter(object sender, EventArgs e)
+        {
+            maskedTextBox1.SelectionStart = 0;
+        }
+
+        private void maskedTextBox1_Click(object sender, EventArgs e)
+        {
+            maskedTextBox1.SelectionStart = 0;
+        }
+
+        private void maskedTextBox2_Click(object sender, EventArgs e)
+        {
+            maskedTextBox2.SelectionStart = 0;
+        }
+
+        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            maskedTextBox2.SelectionStart = 0;
+        }
+
+        private void maskedTextBox3_Enter(object sender, EventArgs e)
+        {
+            maskedTextBox2.SelectionStart = 0;
+        }
     }
 }
