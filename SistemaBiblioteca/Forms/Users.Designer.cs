@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             TopPanel = new Panel();
             SearchPanel = new Panel();
+            pictureBox1 = new PictureBox();
             UsernamePanel = new Panel();
             TxtSearch = new TextBox();
             LblUsers = new Label();
@@ -55,16 +56,15 @@
             Cell_PhoneNumber = new DataGridViewTextBoxColumn();
             Cell_Email = new DataGridViewTextBoxColumn();
             Cell_DNI = new DataGridViewTextBoxColumn();
-            pictureBox1 = new PictureBox();
             TopPanel.SuspendLayout();
             SearchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ToolBoxUsers.SuspendLayout();
             BottomPanel.SuspendLayout();
             statusStrip1.SuspendLayout();
             MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgUsers).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // TopPanel
@@ -88,6 +88,16 @@
             SearchPanel.Name = "SearchPanel";
             SearchPanel.Size = new Size(456, 70);
             SearchPanel.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.search;
+            pictureBox1.Location = new Point(58, 16);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(42, 35);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
             // UsernamePanel
             // 
@@ -300,16 +310,6 @@
             Cell_DNI.Name = "Cell_DNI";
             Cell_DNI.ReadOnly = true;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.search;
-            pictureBox1.Location = new Point(58, 16);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 35);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            // 
             // Users
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -326,6 +326,7 @@
             TopPanel.PerformLayout();
             SearchPanel.ResumeLayout(false);
             SearchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ToolBoxUsers.ResumeLayout(false);
@@ -336,7 +337,6 @@
             statusStrip1.PerformLayout();
             MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgUsers).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
