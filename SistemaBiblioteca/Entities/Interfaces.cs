@@ -10,19 +10,7 @@ namespace SistemaBiblioteca.Entities
     {
         public interface ILibro
         {
-          public void AggLibro();
-
-         public void ModificarLibro();
-            
-            
-         public void Eliminarlibro();
-
-
-         public void ObtenerLibros();
-
-
-
-         public void ObtenerLibroId();
+          
             
               
             
