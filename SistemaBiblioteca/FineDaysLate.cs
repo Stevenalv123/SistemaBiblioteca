@@ -14,18 +14,16 @@ namespace SistemaBiblioteca
         public FineDaysLate(int daysLate, string iDFine, string iDLoan, decimal baseAmount, decimal totalFine) : base(iDFine, iDLoan, baseAmount, totalFine)
         {
             DaysLate = daysLate;
+            iDFine = GenerateIdFine();
         }
-        public override string ToString()
-        {
-            return $"RetrasoPorMulta {DaysLate}, IDMulta {IDFine}, IDPrestamo {IDLoan}, MontoBase {BaseAmount}, TotalMulta {TotalFine}";
-        }
-        private string GenerateIdFine()
+        
+        public override string GenerateIdFine()
         {
             return $"M{counterFines.ToString("D3")}";
 
         }
 
-        public static void IncrementCounter()
+        public override void IncrementCounter()
         {
             counterFines++;
         }

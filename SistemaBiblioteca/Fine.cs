@@ -28,15 +28,15 @@ namespace SistemaBiblioteca
             return $"IDmulta {IDFine}, IDPrestamo {IDLoan}, MontoBase {BaseAmount},  TotalMulta {TotalFine}";
         }
         //Metodo para generar el ID de la multa(Fine)
-        private string GenerateIdFine ()
-        {
-            return $"M{counterFines.ToString("D3")}";
+        public abstract string GenerateIdFine();
+        //{
+        //    return $"M{counterFines.ToString("D3")}";
 
-        }
+        //}
 
-        public static void IncrementCounter()
-        {            
-            counterFines++;
-        }
+        public abstract void IncrementCounter();
+        //{            
+        //    counterFines++;
+        //}
     }
 }

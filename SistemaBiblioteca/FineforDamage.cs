@@ -8,25 +8,24 @@ namespace SistemaBiblioteca
 {
     public class FineforDamage : Fine
     {
-        
-
-        public string DescriptionOfTheDamage {  get; set; }
+        public string DamageDescription {  get; set; }
 
 
         private static int counterFines = 1;
 
-        public FineforDamage(string iDFine, string iDLoan, decimal baseAmount, decimal totalFine) : base(iDFine, iDLoan, baseAmount, totalFine)
+        public FineforDamage(string iDFine, string iDLoan, decimal baseAmount, decimal totalFine, string damageDescription) : base(iDFine, iDLoan, baseAmount, totalFine)
         {
-            DescriptionOfTheDamage = DescriptionOfTheDamage;
+            DamageDescription = damageDescription;
+            IDFine = GenerateIdFine();
 
         }
-        private string GenerateIdFine()
+        public override string GenerateIdFine()
         {
             return $"M{counterFines.ToString("D3")}";
 
         }
 
-        public static void IncrementCounter()
+        public override void IncrementCounter()
         {
             counterFines++;
         }
