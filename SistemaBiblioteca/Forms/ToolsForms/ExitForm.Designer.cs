@@ -1,6 +1,6 @@
 ﻿namespace SistemaBiblioteca.Forms
 {
-    partial class Exit
+    partial class ExitForm
     {
         /// <summary>
         /// Required designer variable.

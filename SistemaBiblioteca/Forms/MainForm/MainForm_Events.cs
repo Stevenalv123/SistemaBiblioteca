@@ -6,10 +6,10 @@ namespace SistemaBiblioteca
         // Open the form of users
         private async void ShowUsers(object sender, EventArgs e)
         {
-            if (IsFormOpen(typeof(Users))) return;
+            if (IsFormOpen(typeof(UserForm))) return;
             OpenForm(new LoadingForm());
             await Task.Run(() => ShowLoading());
-            OpenForm(new Users());
+            OpenForm(new UserForm());
         }
 
         // Open the form of books
@@ -24,7 +24,7 @@ namespace SistemaBiblioteca
         // Shows a dialog to confirm the exit of the program
         private void Exit(object sender, FormClosingEventArgs e)
         {
-            Exit exit = new Exit();
+            ExitForm exit = new ExitForm();
             DialogResult result = exit.ShowDialog();
             if (result != DialogResult.Yes)
             {

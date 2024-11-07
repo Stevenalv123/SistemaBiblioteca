@@ -8,27 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaBiblioteca.Forms.Books
+namespace SistemaBiblioteca.Forms
 {
-    public partial class AddBooks : Form
+    public partial class ExitForm : Form
     {
-        public AddBooks()
+        public ExitForm()
         {
             InitializeComponent();
+            this.AcceptButton = BtnExit;
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.Yes;
             this.Close();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            this.DialogResult=DialogResult.Cancel;
             this.Close();
         }
-
-        
     }
 }
