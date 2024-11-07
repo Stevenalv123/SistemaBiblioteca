@@ -63,7 +63,7 @@
             // 
             PicLogo.BackColor = Color.White;
             PicLogo.Dock = DockStyle.Fill;
-            PicLogo.Image = Properties.Resources.PuertaAMilMundosLogo;
+            PicLogo.Image = Properties.Resources.PuertasAMilMundosLogo;
             PicLogo.Location = new Point(0, 0);
             PicLogo.Name = "PicLogo";
             PicLogo.Size = new Size(455, 161);

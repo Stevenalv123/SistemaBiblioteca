@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaBiblioteca.Forms.BooksForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,6 +71,18 @@ namespace SistemaBiblioteca.Forms.Books
         private void maskedTextBox3_Enter(object sender, EventArgs e)
         {
             maskedTextBox2.SelectionStart = 0;
+        }
+
+        private void BtnAddAuthor_Click(object sender, EventArgs e)
+        {
+            AddAutorForm addAutorForm = new AddAutorForm();
+            addAutorForm.ShowDialog();
+        }
+
+        private void BtnAddEditorial_Click(object sender, EventArgs e)
+        {
+            AddEditorialForm addEditorialForm = new AddEditorialForm();
+            addEditorialForm.ShowDialog();
         }
     }
 }

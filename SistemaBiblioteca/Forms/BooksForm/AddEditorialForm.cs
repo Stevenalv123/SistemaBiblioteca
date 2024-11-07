@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace SistemaBiblioteca.Forms.BooksForm
 {
-    public partial class AddAutorForm : Form
+    public partial class AddEditorialForm : Form
     {
-        public AddAutorForm()
+        public AddEditorialForm()
         {
             InitializeComponent();
         }
 
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            DialogResult=DialogResult.OK;
             this.Close();
         }
     }

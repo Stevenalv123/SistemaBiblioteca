@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    public  class Pretsmo
+    public  class Prestamo
 { 
       
 
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
          public string FechaPrestamo { get; set; }
          public string FechaDevolucion { get; set; }
 
-    public Pretsmo(string iDPrestamo, string nombre, string iDUsuario, string iDLibro, string fechaPrestamo, string fechaDevolucion)
+    public Prestamo(string iDPrestamo, string nombre, string iDUsuario, string iDLibro, string fechaPrestamo, string fechaDevolucion)
     {
         IDPrestamo = iDPrestamo;
         Nombre = nombre;

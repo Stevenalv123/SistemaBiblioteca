@@ -39,10 +39,10 @@
             BtnCancel = new Button();
             BtnSave = new Button();
             label7 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            BtnAddAuthor = new FontAwesome.Sharp.IconButton();
             sfComboBox1 = new Syncfusion.WinForms.ListView.SfComboBox();
             sfComboBox2 = new Syncfusion.WinForms.ListView.SfComboBox();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            BtnAddEditorial = new FontAwesome.Sharp.IconButton();
             maskedTextBox2 = new MaskedTextBox();
             maskedTextBox3 = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)sfComboBox1).BeginInit();
@@ -176,23 +176,24 @@
             label7.TabIndex = 14;
             label7.Text = "Unidades";
             // 
-            // iconButton1
+            // BtnAddAuthor
             // 
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.Font = new Font("Cambria", 9F, FontStyle.Bold);
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Add;
-            iconButton1.IconColor = Color.Green;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            iconButton1.IconSize = 32;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(582, 63);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(144, 32);
-            iconButton1.TabIndex = 15;
-            iconButton1.Text = "Agregar Autor";
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.UseVisualStyleBackColor = true;
+            BtnAddAuthor.Cursor = Cursors.Hand;
+            BtnAddAuthor.FlatAppearance.BorderSize = 0;
+            BtnAddAuthor.Font = new Font("Cambria", 9F, FontStyle.Bold);
+            BtnAddAuthor.IconChar = FontAwesome.Sharp.IconChar.Add;
+            BtnAddAuthor.IconColor = Color.Green;
+            BtnAddAuthor.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            BtnAddAuthor.IconSize = 26;
+            BtnAddAuthor.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnAddAuthor.Location = new Point(582, 63);
+            BtnAddAuthor.Name = "BtnAddAuthor";
+            BtnAddAuthor.Size = new Size(129, 32);
+            BtnAddAuthor.TabIndex = 15;
+            BtnAddAuthor.Text = "Agregar Autor";
+            BtnAddAuthor.TextAlign = ContentAlignment.MiddleRight;
+            BtnAddAuthor.UseVisualStyleBackColor = true;
+            BtnAddAuthor.Click += BtnAddAuthor_Click;
             // 
             // sfComboBox1
             // 
@@ -218,23 +219,24 @@
             sfComboBox2.Style.TokenStyle.CloseButtonBackColor = Color.FromArgb(255, 255, 255);
             sfComboBox2.TabIndex = 18;
             // 
-            // iconButton2
+            // BtnAddEditorial
             // 
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.Font = new Font("Cambria", 9F, FontStyle.Bold);
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Add;
-            iconButton2.IconColor = Color.Green;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            iconButton2.IconSize = 32;
-            iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(582, 170);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(144, 32);
-            iconButton2.TabIndex = 17;
-            iconButton2.Text = "Agregar Editorial";
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.UseVisualStyleBackColor = true;
+            BtnAddEditorial.Cursor = Cursors.Hand;
+            BtnAddEditorial.FlatAppearance.BorderSize = 0;
+            BtnAddEditorial.Font = new Font("Cambria", 8F, FontStyle.Bold);
+            BtnAddEditorial.IconChar = FontAwesome.Sharp.IconChar.Add;
+            BtnAddEditorial.IconColor = Color.Green;
+            BtnAddEditorial.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            BtnAddEditorial.IconSize = 26;
+            BtnAddEditorial.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnAddEditorial.Location = new Point(582, 170);
+            BtnAddEditorial.Name = "BtnAddEditorial";
+            BtnAddEditorial.Size = new Size(129, 32);
+            BtnAddEditorial.TabIndex = 17;
+            BtnAddEditorial.Text = "Agregar Editorial";
+            BtnAddEditorial.TextAlign = ContentAlignment.MiddleRight;
+            BtnAddEditorial.UseVisualStyleBackColor = true;
+            BtnAddEditorial.Click += BtnAddEditorial_Click;
             // 
             // maskedTextBox2
             // 
@@ -279,9 +281,9 @@
             Controls.Add(maskedTextBox3);
             Controls.Add(maskedTextBox2);
             Controls.Add(sfComboBox2);
-            Controls.Add(iconButton2);
+            Controls.Add(BtnAddEditorial);
             Controls.Add(sfComboBox1);
-            Controls.Add(iconButton1);
+            Controls.Add(BtnAddAuthor);
             Controls.Add(label7);
             Controls.Add(BtnCancel);
             Controls.Add(BtnSave);
@@ -320,10 +322,10 @@
         private Button BtnCancel;
         private Button BtnSave;
         private Label label7;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BtnAddAuthor;
         private Syncfusion.WinForms.ListView.SfComboBox sfComboBox1;
         private Syncfusion.WinForms.ListView.SfComboBox sfComboBox2;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton BtnAddEditorial;
         private MaskedTextBox maskedTextBox2;
         private MaskedTextBox maskedTextBox3;
     }

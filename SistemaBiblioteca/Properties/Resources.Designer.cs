@@ -83,9 +83,9 @@ namespace SistemaBiblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PuertaAMilMundosLogo {
+        internal static System.Drawing.Bitmap PuertasAMilMundosLogo {
             get {
-                object obj = ResourceManager.GetObject("PuertaAMilMundosLogo", resourceCulture);
+                object obj = ResourceManager.GetObject("PuertasAMilMundosLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

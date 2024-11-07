@@ -152,11 +152,11 @@
             // LogoPicture
             // 
             LogoPicture.Dock = DockStyle.Fill;
-            LogoPicture.Image = Properties.Resources.PuertaAMilMundosLogo;
+            LogoPicture.Image = Properties.Resources.PuertasAMilMundosLogo;
             LogoPicture.Location = new Point(0, 0);
             LogoPicture.Name = "LogoPicture";
             LogoPicture.Size = new Size(356, 251);
-            LogoPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            LogoPicture.SizeMode = PictureBoxSizeMode.Zoom;
             LogoPicture.TabIndex = 0;
             LogoPicture.TabStop = false;
             // 
