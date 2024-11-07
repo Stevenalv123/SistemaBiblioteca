@@ -12,26 +12,26 @@ namespace SistemaBiblioteca.Entities
    
         public string ID {  get; set; }
 
-        public string Nombre { get; set; }
-        public string Direccion { get; set; }
+        public string  Name { get; set; }
+        public string Address { get; set; }
         
-        public string NumeroTelefonico { get; set; }
-        public string CorreoElectronico {  get; set; }
-        public string Identidad { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email {  get; set; }
+        public string Identity { get; set; }
 
-        public Users(string iD, string nombre, string direccion, string numeroTelefonico, string correoElectronico, string identidad)
+        public Users(string iD, string name, string address, string phoneNumber, string email, string identity)
         {
             ID = iD;
-            Nombre = nombre;
-            Direccion = direccion;
-            NumeroTelefonico = numeroTelefonico;
-            CorreoElectronico = correoElectronico;
-            Identidad = identidad;
+            Name = name;
+            Address = address;
+            PhoneNumber = phoneNumber;
+            Email = email;
+            Identity = identity;
         }
 
         public override string ToString()
         {
-            return $"nombre del usuario {Nombre}, identidad {Identidad}, ID {ID}, Direccion {Direccion}, NumeroTelefonico {NumeroTelefonico}, CorreoElectronico {CorreoElectronico}";
+            return $"nombre del usuario {Name}, identidad {Identity}, ID {ID}, Direccion {Address}, NumeroTelefonico {PhoneNumber}, CorreoElectronico {Email}";
         }
     }
 }
