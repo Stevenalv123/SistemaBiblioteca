@@ -1,38 +1,57 @@
-﻿using System;
+﻿using SistemaBiblioteca.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-    public class Libro
+public enum State
 {
-   
-
-    public string IDLibro { get; set; }
-    public string Titulo { get; set; }
-    public string Autor { get; set; }
-    public string Genero { get; set; }
+    Disponible,
+    Prestado,
+    Reparacion,
+    Perdido
+}
+public class Libro:IBook
+{
+    public string Id_Book { get; set; }
+    public string Title { get; set; }
+    public Author Author{ get; set; }
+    public Categorie Categorie { get; set; }
     public string ISBN { get; set; }
-    public string Editorial { get; set; }
-    public int AñoPublicacion { get; set; }
-    public string Estado { get; set; }
+    public Editorial Editorial { get; set; }
+    public int YearPublication { get; set; }
+    public State BookState { get; set; }
 
-    public Libro(string iDLibro, string titulo, string autor, string genero, string iSBN, string editorial, int añoPublicacion, string estado)
+    public Libro(string id_Book, string title, Author author, Categorie categorie, string iSBN, Editorial editorial, int yearPublication, State bookState)
     {
-        IDLibro = iDLibro;
-        Titulo = titulo;
-        Autor = autor;
-        Genero = genero;
+        Id_Book = id_Book;
+        Title = title;
+        Author = author;
+        Categorie = categorie;
         ISBN = iSBN;
         Editorial = editorial;
-        AñoPublicacion = añoPublicacion;
-        Estado = estado;
+        YearPublication = yearPublication;
+        BookState = bookState;
     }
-    public override string ToString()
+
+    public void AddBook()
     {
-        return $"IDLibro {IDLibro}, Titulo {Titulo}, Autor {Autor}, Genero {Genero}, ISBN {ISBN}, Editorial {Editorial}, añoPublcacion {AñoPublicacion}, Estado {Estado}"; 
+        throw new NotImplementedException();
     }
 
+    public void UpdateBook()
+    {
+        throw new NotImplementedException();
+    }
 
+    public void DeleteBook()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void GetBook()
+    {
+        throw new NotImplementedException();
+    }
 }
