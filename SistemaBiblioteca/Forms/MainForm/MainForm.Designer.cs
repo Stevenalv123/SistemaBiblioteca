@@ -47,9 +47,9 @@
             LateralPanel.BackColor = Color.White;
             LateralPanel.BorderStyle = BorderStyle.FixedSingle;
             LateralPanel.Controls.Add(BtnReports);
-            LateralPanel.Controls.Add(BtnDevolutions);
-            LateralPanel.Controls.Add(BtnUsers);
             LateralPanel.Controls.Add(BtnBooks);
+            LateralPanel.Controls.Add(BtnUsers);
+            LateralPanel.Controls.Add(BtnDevolutions);
             LateralPanel.Controls.Add(IconPanel);
             LateralPanel.Dock = DockStyle.Left;
             LateralPanel.Location = new Point(0, 0);
@@ -90,7 +90,7 @@
             BtnDevolutions.IconFont = FontAwesome.Sharp.IconFont.Solid;
             BtnDevolutions.IconSize = 60;
             BtnDevolutions.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnDevolutions.Location = new Point(0, 397);
+            BtnDevolutions.Location = new Point(0, 251);
             BtnDevolutions.Name = "BtnDevolutions";
             BtnDevolutions.Size = new Size(356, 73);
             BtnDevolutions.TabIndex = 3;
@@ -132,7 +132,7 @@
             BtnBooks.IconFont = FontAwesome.Sharp.IconFont.Solid;
             BtnBooks.IconSize = 60;
             BtnBooks.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnBooks.Location = new Point(0, 251);
+            BtnBooks.Location = new Point(0, 397);
             BtnBooks.Name = "BtnBooks";
             BtnBooks.Size = new Size(356, 73);
             BtnBooks.TabIndex = 1;
