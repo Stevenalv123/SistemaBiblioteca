@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaBiblioteca.Forms
 {
-    public partial class Exit : Form
+    public partial class ExitForm : Form
     {
-        public Exit()
+        public ExitForm()
         {
             InitializeComponent();
             this.AcceptButton = BtnExit;

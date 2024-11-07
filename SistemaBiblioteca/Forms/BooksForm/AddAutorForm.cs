@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaBiblioteca.Forms
+namespace SistemaBiblioteca.Forms.BooksForm
 {
-    public partial class Users : Form
+    public partial class AddAutorForm : Form
     {
-        public Users()
+        public AddAutorForm()
         {
             InitializeComponent();
         }
