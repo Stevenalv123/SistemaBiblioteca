@@ -14,13 +14,16 @@ namespace SistemaBiblioteca.Forms.Books
 {
     public partial class AddBooks : Form
     {
+        bool correctISBN;
         public List<Author> authors { get; set; }
         public List<Editorial> editorials { get; set; }
+        public Queue<Categorie> categories { get; set; }
         public AddBooks()
         {
             InitializeComponent();
             authors = new List<Author>();
             editorials = new List<Editorial>();
+            categories = new Queue<Categorie>();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -29,19 +32,18 @@ namespace SistemaBiblioteca.Forms.Books
             this.Close();
         }
 
-        private void maskedTextBox1_Click(object sender, EventArgs e)
+        private void ValidateForm()
         {
-            maskedTextBox1.SelectionStart = 0;
-        }
+            bool isTitleValid = !string.IsNullOrEmpty(TxtTitle.Text);
+            bool isISBNValid = correctISBN;
+            bool isCategorieValid = CmbCategories.SelectedItem != null;
 
-        private void maskedTextBox2_Click(object sender, EventArgs e)
-        {
-            maskedTextBox2.SelectionStart = 0;
+            BtnSave.Enabled = isTitleValid && isISBNValid && isCategorieValid;
         }
 
         private void BtnAddAuthor_Click(object sender, EventArgs e)
         {
-            AddAutorForm addAutorForm = new AddAutorForm(authors); // Pasar la lista existente
+            AddAutorForm addAutorForm = new AddAutorForm(authors);
             if (addAutorForm.ShowDialog() == DialogResult.OK)
             {
                 // Actualizar el ComboBox con la lista de autores actualizada
@@ -54,12 +56,47 @@ namespace SistemaBiblioteca.Forms.Books
         private void BtnAddEditorial_Click(object sender, EventArgs e)
         {
             AddEditorialForm addEditorialForm = new AddEditorialForm(editorials);
-            if(addEditorialForm.ShowDialog()==DialogResult.OK)
+            if (addEditorialForm.ShowDialog() == DialogResult.OK)
             {
                 // Actualizar el ComboBox con la lista de editoriales actualizada
                 CmbEditorial.DataSource = null;
                 CmbEditorial.DataSource = editorials;
                 CmbEditorial.DisplayMember = "Name";
+            }
+        }
+
+        private void MtbISBN_TextChanged(object sender, EventArgs e)
+        {
+            LblIconFormat.Text = "✘";
+            LblIconFormat.ForeColor = Color.Red;
+            LblFormatStatus.Text = "El ISBN debe tener 13 dígitos";
+            correctISBN = false;
+            ValidateForm();
+
+            if (MtbISBN.MaskFull)
+            {
+                LblIconFormat.Text = "✔";
+                LblIconFormat.ForeColor = Color.LightGreen;
+                LblFormatStatus.Text = "Formato válido";
+                correctISBN = true;
+                ValidateForm();
+            }
+        }
+
+        private void TxtTitle_TextChanged(object sender, EventArgs e)
+        {
+            ValidateForm();
+        }
+
+        private void BtnAddCategorie_Click(object sender, EventArgs e)
+        {
+            AddCategorieForm addCategorieForm = new AddCategorieForm(categories);
+            if (addCategorieForm.ShowDialog() == DialogResult.OK)
+            {
+                // Actualizar el ComboBox con la lista de categorias actualizada
+                CmbCategories.DataSource = null;
+                CmbCategories.DataSource = categories.ToList();
+                CmbCategories.DisplayMember = "Name";
             }
         }
     }

@@ -8,13 +8,27 @@ namespace SistemaBiblioteca.Entities
 {
     public class Categorie
     {
-        public int Id_Categorie { get; set; }
+        public string Id_Categorie { get; set; }
         public string Name { get; set; }
 
-        public Categorie(int id_Categorie, string name)
+        public Categorie(string name)
         {
-            Id_Categorie = id_Categorie;
+            Id_Categorie = GetId_Categorie();
             Name = name;
+        }
+
+        private int counterCategorie = 1;
+        private string GetId_Categorie()
+        {
+            string id = $"C{counterCategorie.ToString("D3")}";
+            IncrementCounter();
+            return id;
+
+        }
+
+        private void IncrementCounter()
+        {
+            counterCategorie++;
         }
     }
 }

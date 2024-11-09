@@ -53,9 +53,8 @@
             LateralPanel.Controls.Add(IconPanel);
             LateralPanel.Dock = DockStyle.Left;
             LateralPanel.Location = new Point(0, 0);
-            LateralPanel.Margin = new Padding(3, 4, 3, 4);
             LateralPanel.Name = "LateralPanel";
-            LateralPanel.Size = new Size(409, 840);
+            LateralPanel.Size = new Size(358, 630);
             LateralPanel.TabIndex = 0;
             // 
             // BtnReports
@@ -71,10 +70,9 @@
             BtnReports.IconFont = FontAwesome.Sharp.IconFont.Solid;
             BtnReports.IconSize = 60;
             BtnReports.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnReports.Location = new Point(0, 626);
-            BtnReports.Margin = new Padding(3, 4, 3, 4);
+            BtnReports.Location = new Point(0, 470);
             BtnReports.Name = "BtnReports";
-            BtnReports.Size = new Size(407, 97);
+            BtnReports.Size = new Size(356, 73);
             BtnReports.TabIndex = 4;
             BtnReports.Text = "Reportes";
             BtnReports.UseVisualStyleBackColor = false;
@@ -92,10 +90,9 @@
             BtnBooks.IconFont = FontAwesome.Sharp.IconFont.Solid;
             BtnBooks.IconSize = 60;
             BtnBooks.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnBooks.Location = new Point(0, 529);
-            BtnBooks.Margin = new Padding(3, 4, 3, 4);
+            BtnBooks.Location = new Point(0, 397);
             BtnBooks.Name = "BtnBooks";
-            BtnBooks.Size = new Size(407, 97);
+            BtnBooks.Size = new Size(356, 73);
             BtnBooks.TabIndex = 1;
             BtnBooks.Text = "Libros";
             BtnBooks.UseVisualStyleBackColor = false;
@@ -114,10 +111,9 @@
             BtnUsers.IconFont = FontAwesome.Sharp.IconFont.Solid;
             BtnUsers.IconSize = 60;
             BtnUsers.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnUsers.Location = new Point(0, 432);
-            BtnUsers.Margin = new Padding(3, 4, 3, 4);
+            BtnUsers.Location = new Point(0, 324);
             BtnUsers.Name = "BtnUsers";
-            BtnUsers.Size = new Size(407, 97);
+            BtnUsers.Size = new Size(356, 73);
             BtnUsers.TabIndex = 2;
             BtnUsers.Text = "Usuarios";
             BtnUsers.UseVisualStyleBackColor = false;
@@ -136,10 +132,9 @@
             BtnDevolutions.IconFont = FontAwesome.Sharp.IconFont.Solid;
             BtnDevolutions.IconSize = 60;
             BtnDevolutions.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnDevolutions.Location = new Point(0, 335);
-            BtnDevolutions.Margin = new Padding(3, 4, 3, 4);
+            BtnDevolutions.Location = new Point(0, 251);
             BtnDevolutions.Name = "BtnDevolutions";
-            BtnDevolutions.Size = new Size(407, 97);
+            BtnDevolutions.Size = new Size(356, 73);
             BtnDevolutions.TabIndex = 3;
             BtnDevolutions.Text = "Prestamos y Devoluciones";
             BtnDevolutions.TextAlign = ContentAlignment.MiddleRight;
@@ -150,9 +145,8 @@
             IconPanel.Controls.Add(LogoPicture);
             IconPanel.Dock = DockStyle.Top;
             IconPanel.Location = new Point(0, 0);
-            IconPanel.Margin = new Padding(3, 4, 3, 4);
             IconPanel.Name = "IconPanel";
-            IconPanel.Size = new Size(407, 335);
+            IconPanel.Size = new Size(356, 251);
             IconPanel.TabIndex = 0;
             // 
             // LogoPicture
@@ -160,9 +154,8 @@
             LogoPicture.Dock = DockStyle.Fill;
             LogoPicture.Image = Properties.Resources.PuertasAMilMundosLogo;
             LogoPicture.Location = new Point(0, 0);
-            LogoPicture.Margin = new Padding(3, 4, 3, 4);
             LogoPicture.Name = "LogoPicture";
-            LogoPicture.Size = new Size(407, 335);
+            LogoPicture.Size = new Size(356, 251);
             LogoPicture.SizeMode = PictureBoxSizeMode.Zoom;
             LogoPicture.TabIndex = 0;
             LogoPicture.TabStop = false;
@@ -170,22 +163,20 @@
             // MainPanel
             // 
             MainPanel.Dock = DockStyle.Fill;
-            MainPanel.Location = new Point(409, 0);
-            MainPanel.Margin = new Padding(3, 4, 3, 4);
+            MainPanel.Location = new Point(358, 0);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(1064, 840);
+            MainPanel.Size = new Size(931, 630);
             MainPanel.TabIndex = 1;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1473, 840);
+            ClientSize = new Size(1289, 630);
             Controls.Add(MainPanel);
             Controls.Add(LateralPanel);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pagina Principal";

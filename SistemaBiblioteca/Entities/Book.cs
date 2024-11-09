@@ -23,16 +23,30 @@ public class Book:IBook
     public int YearPublication { get; set; }
     public State BookState { get; set; }
 
-    public Book(string id_Book, string title, Author author, Categorie categorie, string iSBN, Editorial editorial, int yearPublication, State bookState)
+    public Book(string title, Author author, Categorie categorie, string iSBN, Editorial editorial, int yearPublication, State bookState)
     {
-        Id_Book = id_Book;
+        Id_Book = GetId_Book();
         Title = title;
         Author = author;
         Categorie = categorie;
         ISBN = iSBN;
         Editorial = editorial;
         YearPublication = yearPublication;
-        BookState = bookState;
+        BookState = bookState;  
+    }
+
+    private int counterBook = 1;
+    private string GetId_Book()
+    {
+        string id = $"L{counterBook.ToString("D3")}";
+        IncrementCounter();
+        return id;
+
+    }
+
+    private void IncrementCounter()
+    {
+        counterBook++;
     }
 
     public void AddBook()
