@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaBiblioteca
+namespace SistemaBiblioteca.Entities
 {
     public class FineforDamage : Fine
     {
-        public string DamageDescription {  get; set; }
+        public string DamageDescription { get; set; }
 
 
         private static int counterFines = 1;

@@ -12,7 +12,7 @@ public enum State
     Reparacion,
     Perdido
 }
-public class Libro:IBook
+public class Book:IBook
 {
     public string Id_Book { get; set; }
     public string Title { get; set; }
@@ -23,7 +23,7 @@ public class Libro:IBook
     public int YearPublication { get; set; }
     public State BookState { get; set; }
 
-    public Libro(string id_Book, string title, Author author, Categorie categorie, string iSBN, Editorial editorial, int yearPublication, State bookState)
+    public Book(string id_Book, string title, Author author, Categorie categorie, string iSBN, Editorial editorial, int yearPublication, State bookState)
     {
         Id_Book = id_Book;
         Title = title;

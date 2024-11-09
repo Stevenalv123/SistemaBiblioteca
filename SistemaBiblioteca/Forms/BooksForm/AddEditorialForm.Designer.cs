@@ -30,14 +30,14 @@
         {
             BtnCancel = new Button();
             BtnSave = new Button();
-            maskedTextBox2 = new MaskedTextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            MtbPhoneNumber = new MaskedTextBox();
+            TxtAdress = new TextBox();
+            TxtName = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             label4 = new Label();
-            textBox3 = new TextBox();
+            TxtEmail = new TextBox();
             SuspendLayout();
             // 
             // BtnCancel
@@ -51,7 +51,7 @@
             BtnCancel.Location = new Point(500, 68);
             BtnCancel.Name = "BtnCancel";
             BtnCancel.Size = new Size(133, 40);
-            BtnCancel.TabIndex = 29;
+            BtnCancel.TabIndex = 6;
             BtnCancel.Text = "Cancelar";
             BtnCancel.UseVisualStyleBackColor = false;
             BtnCancel.Click += BtnCancel_Click;
@@ -67,39 +67,39 @@
             BtnSave.Location = new Point(500, 22);
             BtnSave.Name = "BtnSave";
             BtnSave.Size = new Size(133, 40);
-            BtnSave.TabIndex = 30;
+            BtnSave.TabIndex = 5;
             BtnSave.Text = "Guardar";
             BtnSave.UseVisualStyleBackColor = false;
             BtnSave.Click += BtnSave_Click;
             // 
-            // maskedTextBox2
+            // MtbPhoneNumber
             // 
-            maskedTextBox2.BackColor = Color.White;
-            maskedTextBox2.BeepOnError = true;
-            maskedTextBox2.Font = new Font("Cambria", 15.75F);
-            maskedTextBox2.HidePromptOnLeave = true;
-            maskedTextBox2.Location = new Point(192, 95);
-            maskedTextBox2.Mask = "0000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.PromptChar = ' ';
-            maskedTextBox2.RejectInputOnFirstFailure = true;
-            maskedTextBox2.Size = new Size(279, 32);
-            maskedTextBox2.SkipLiterals = false;
-            maskedTextBox2.TabIndex = 28;
+            MtbPhoneNumber.BackColor = Color.White;
+            MtbPhoneNumber.BeepOnError = true;
+            MtbPhoneNumber.Font = new Font("Cambria", 15.75F);
+            MtbPhoneNumber.HidePromptOnLeave = true;
+            MtbPhoneNumber.Location = new Point(192, 95);
+            MtbPhoneNumber.Mask = "(999)000-0000";
+            MtbPhoneNumber.Name = "MtbPhoneNumber";
+            MtbPhoneNumber.PromptChar = ' ';
+            MtbPhoneNumber.RejectInputOnFirstFailure = true;
+            MtbPhoneNumber.Size = new Size(279, 32);
+            MtbPhoneNumber.SkipLiterals = false;
+            MtbPhoneNumber.TabIndex = 3;
             // 
-            // textBox2
+            // TxtAdress
             // 
-            textBox2.Location = new Point(192, 57);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(279, 29);
-            textBox2.TabIndex = 26;
+            TxtAdress.Location = new Point(192, 57);
+            TxtAdress.Name = "TxtAdress";
+            TxtAdress.Size = new Size(279, 29);
+            TxtAdress.TabIndex = 2;
             // 
-            // textBox1
+            // TxtName
             // 
-            textBox1.Location = new Point(192, 19);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(279, 29);
-            textBox1.TabIndex = 27;
+            TxtName.Location = new Point(192, 19);
+            TxtName.Name = "TxtName";
+            TxtName.Size = new Size(279, 29);
+            TxtName.TabIndex = 1;
             // 
             // label3
             // 
@@ -137,12 +137,12 @@
             label4.TabIndex = 31;
             label4.Text = "Correo electronico:";
             // 
-            // textBox3
+            // TxtEmail
             // 
-            textBox3.Location = new Point(192, 136);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(279, 29);
-            textBox3.TabIndex = 32;
+            TxtEmail.Location = new Point(192, 136);
+            TxtEmail.Name = "TxtEmail";
+            TxtEmail.Size = new Size(279, 29);
+            TxtEmail.TabIndex = 4;
             // 
             // AddEditorialForm
             // 
@@ -150,13 +150,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(651, 195);
-            Controls.Add(textBox3);
+            Controls.Add(TxtEmail);
             Controls.Add(label4);
             Controls.Add(BtnCancel);
             Controls.Add(BtnSave);
-            Controls.Add(maskedTextBox2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(MtbPhoneNumber);
+            Controls.Add(TxtAdress);
+            Controls.Add(TxtName);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -177,13 +177,13 @@
 
         private Button BtnCancel;
         private Button BtnSave;
-        private MaskedTextBox maskedTextBox2;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private MaskedTextBox MtbPhoneNumber;
+        private TextBox TxtAdress;
+        private TextBox TxtName;
         private Label label3;
         private Label label2;
         private Label label1;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox TxtEmail;
     }
 }

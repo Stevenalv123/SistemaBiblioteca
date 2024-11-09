@@ -13,12 +13,24 @@ namespace SistemaBiblioteca.Entities
         public string Nacionality { get; set; }
         public string Year_birth { get; set; }
 
-        public Author(string id_Author, string name, string nacionality, string year_birth)
+        public Author(string name, string nacionality, string year_birth)
         {
-            Id_Author = id_Author;
+            Id_Author = GetId_Author();
             Name = name;
             Nacionality = nacionality;
             Year_birth = year_birth;
+        }
+
+
+        private int counterAuthor = 1;
+        private string GetId_Author()
+        {
+            return $"A{counterAuthor.ToString("D3")}";
+        }
+
+        private void IncrementCounter()
+        {
+            counterAuthor++;
         }
     }
 }

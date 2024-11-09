@@ -40,13 +40,13 @@
             BtnSave = new Button();
             label7 = new Label();
             BtnAddAuthor = new FontAwesome.Sharp.IconButton();
-            sfComboBox1 = new Syncfusion.WinForms.ListView.SfComboBox();
-            sfComboBox2 = new Syncfusion.WinForms.ListView.SfComboBox();
+            CmbAuthors = new Syncfusion.WinForms.ListView.SfComboBox();
             BtnAddEditorial = new FontAwesome.Sharp.IconButton();
             maskedTextBox2 = new MaskedTextBox();
             maskedTextBox3 = new MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)sfComboBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)sfComboBox2).BeginInit();
+            CmbEditorial = new Syncfusion.WinForms.ListView.SfComboBox();
+            ((System.ComponentModel.ISupportInitialize)CmbAuthors).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CmbEditorial).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -132,12 +132,12 @@
             maskedTextBox1.Size = new Size(200, 32);
             maskedTextBox1.TabIndex = 8;
             maskedTextBox1.Click += maskedTextBox1_Click;
-            maskedTextBox1.Enter += maskedTextBox1_Enter;
             // 
             // BtnCancel
             // 
             BtnCancel.BackColor = Color.FromArgb(185, 27, 33);
             BtnCancel.Cursor = Cursors.Hand;
+            BtnCancel.DialogResult = DialogResult.Cancel;
             BtnCancel.FlatAppearance.BorderSize = 0;
             BtnCancel.FlatStyle = FlatStyle.Flat;
             BtnCancel.Font = new Font("Cambria", 10F, FontStyle.Bold);
@@ -148,12 +148,12 @@
             BtnCancel.TabIndex = 12;
             BtnCancel.Text = "Cancelar";
             BtnCancel.UseVisualStyleBackColor = false;
-            BtnCancel.Click += BtnCancel_Click;
             // 
             // BtnSave
             // 
             BtnSave.BackColor = Color.FromArgb(40, 68, 131);
             BtnSave.Cursor = Cursors.Hand;
+            BtnSave.DialogResult = DialogResult.OK;
             BtnSave.FlatAppearance.BorderSize = 0;
             BtnSave.FlatStyle = FlatStyle.Flat;
             BtnSave.Font = new Font("Cambria", 10F, FontStyle.Bold);
@@ -195,29 +195,20 @@
             BtnAddAuthor.UseVisualStyleBackColor = true;
             BtnAddAuthor.Click += BtnAddAuthor_Click;
             // 
-            // sfComboBox1
+            // CmbAuthors
             // 
-            sfComboBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
-            sfComboBox1.ComboBoxMode = Syncfusion.WinForms.ListView.Enums.ComboBoxMode.MultiSelection;
-            sfComboBox1.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
-            sfComboBox1.DropDownStyle = Syncfusion.WinForms.ListView.Enums.DropDownStyle.DropDownList;
-            sfComboBox1.Location = new Point(261, 63);
-            sfComboBox1.Name = "sfComboBox1";
-            sfComboBox1.Size = new Size(305, 32);
-            sfComboBox1.Style.TokenStyle.CloseButtonBackColor = Color.FromArgb(255, 255, 255);
-            sfComboBox1.TabIndex = 16;
-            // 
-            // sfComboBox2
-            // 
-            sfComboBox2.AutoCompleteMode = AutoCompleteMode.Suggest;
-            sfComboBox2.ComboBoxMode = Syncfusion.WinForms.ListView.Enums.ComboBoxMode.MultiSelection;
-            sfComboBox2.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
-            sfComboBox2.DropDownStyle = Syncfusion.WinForms.ListView.Enums.DropDownStyle.DropDownList;
-            sfComboBox2.Location = new Point(261, 170);
-            sfComboBox2.Name = "sfComboBox2";
-            sfComboBox2.Size = new Size(305, 32);
-            sfComboBox2.Style.TokenStyle.CloseButtonBackColor = Color.FromArgb(255, 255, 255);
-            sfComboBox2.TabIndex = 18;
+            CmbAuthors.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CmbAuthors.BackColor = Color.White;
+            CmbAuthors.ComboBoxMode = Syncfusion.WinForms.ListView.Enums.ComboBoxMode.MultiSelection;
+            CmbAuthors.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
+            CmbAuthors.DropDownStyle = Syncfusion.WinForms.ListView.Enums.DropDownStyle.DropDownList;
+            CmbAuthors.Location = new Point(261, 63);
+            CmbAuthors.Name = "CmbAuthors";
+            CmbAuthors.Size = new Size(305, 32);
+            CmbAuthors.Style.EditorStyle.BackColor = Color.White;
+            CmbAuthors.Style.TokenStyle.CloseButtonBackColor = Color.FromArgb(255, 255, 255);
+            CmbAuthors.TabIndex = 16;
+            CmbAuthors.Watermark = "Seleccione uno o mas autores";
             // 
             // BtnAddEditorial
             // 
@@ -253,7 +244,6 @@
             maskedTextBox2.SkipLiterals = false;
             maskedTextBox2.TabIndex = 19;
             maskedTextBox2.Click += maskedTextBox2_Click;
-            maskedTextBox2.Enter += maskedTextBox2_Enter;
             // 
             // maskedTextBox3
             // 
@@ -269,8 +259,19 @@
             maskedTextBox3.Size = new Size(144, 32);
             maskedTextBox3.SkipLiterals = false;
             maskedTextBox3.TabIndex = 20;
-            maskedTextBox3.MaskInputRejected += maskedTextBox3_MaskInputRejected;
-            maskedTextBox3.Enter += maskedTextBox3_Enter;
+            // 
+            // CmbEditorial
+            // 
+            CmbEditorial.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CmbEditorial.BackColor = Color.White;
+            CmbEditorial.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
+            CmbEditorial.DropDownStyle = Syncfusion.WinForms.ListView.Enums.DropDownStyle.DropDownList;
+            CmbEditorial.Location = new Point(261, 170);
+            CmbEditorial.Name = "CmbEditorial";
+            CmbEditorial.Size = new Size(305, 32);
+            CmbEditorial.Style.ReadOnlyEditorStyle.BackColor = Color.White;
+            CmbEditorial.Style.TokenStyle.CloseButtonBackColor = Color.FromArgb(255, 255, 255);
+            CmbEditorial.TabIndex = 18;
             // 
             // AddBooks
             // 
@@ -280,9 +281,9 @@
             ClientSize = new Size(748, 388);
             Controls.Add(maskedTextBox3);
             Controls.Add(maskedTextBox2);
-            Controls.Add(sfComboBox2);
+            Controls.Add(CmbEditorial);
             Controls.Add(BtnAddEditorial);
-            Controls.Add(sfComboBox1);
+            Controls.Add(CmbAuthors);
             Controls.Add(BtnAddAuthor);
             Controls.Add(label7);
             Controls.Add(BtnCancel);
@@ -303,8 +304,8 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agregar Libro";
-            ((System.ComponentModel.ISupportInitialize)sfComboBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)sfComboBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CmbAuthors).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CmbEditorial).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -323,10 +324,10 @@
         private Button BtnSave;
         private Label label7;
         private FontAwesome.Sharp.IconButton BtnAddAuthor;
-        private Syncfusion.WinForms.ListView.SfComboBox sfComboBox1;
-        private Syncfusion.WinForms.ListView.SfComboBox sfComboBox2;
+        private Syncfusion.WinForms.ListView.SfComboBox CmbAuthors;
         private FontAwesome.Sharp.IconButton BtnAddEditorial;
         private MaskedTextBox maskedTextBox2;
         private MaskedTextBox maskedTextBox3;
+        private Syncfusion.WinForms.ListView.SfComboBox CmbEditorial;
     }
 }

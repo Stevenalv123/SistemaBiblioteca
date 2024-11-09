@@ -31,9 +31,9 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            maskedTextBox2 = new MaskedTextBox();
+            txtName = new TextBox();
+            txtNacionality = new TextBox();
+            MtbBirthyear = new MaskedTextBox();
             BtnCancel = new Button();
             BtnSave = new Button();
             SuspendLayout();
@@ -65,34 +65,34 @@
             label3.TabIndex = 0;
             label3.Text = "Año de nacimiento: ";
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Location = new Point(203, 13);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(279, 33);
-            textBox1.TabIndex = 1;
+            txtName.Location = new Point(203, 13);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(279, 33);
+            txtName.TabIndex = 0;
             // 
-            // textBox2
+            // txtNacionality
             // 
-            textBox2.Location = new Point(203, 52);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(279, 33);
-            textBox2.TabIndex = 1;
+            txtNacionality.Location = new Point(203, 52);
+            txtNacionality.Name = "txtNacionality";
+            txtNacionality.Size = new Size(279, 33);
+            txtNacionality.TabIndex = 1;
             // 
-            // maskedTextBox2
+            // MtbBirthyear
             // 
-            maskedTextBox2.BackColor = Color.White;
-            maskedTextBox2.BeepOnError = true;
-            maskedTextBox2.Font = new Font("Cambria", 15.75F);
-            maskedTextBox2.HidePromptOnLeave = true;
-            maskedTextBox2.Location = new Point(203, 94);
-            maskedTextBox2.Mask = "0000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.PromptChar = ' ';
-            maskedTextBox2.RejectInputOnFirstFailure = true;
-            maskedTextBox2.Size = new Size(279, 32);
-            maskedTextBox2.SkipLiterals = false;
-            maskedTextBox2.TabIndex = 20;
+            MtbBirthyear.BackColor = Color.White;
+            MtbBirthyear.BeepOnError = true;
+            MtbBirthyear.Font = new Font("Cambria", 15.75F);
+            MtbBirthyear.HidePromptOnLeave = true;
+            MtbBirthyear.Location = new Point(203, 94);
+            MtbBirthyear.Mask = "0000";
+            MtbBirthyear.Name = "MtbBirthyear";
+            MtbBirthyear.PromptChar = ' ';
+            MtbBirthyear.RejectInputOnFirstFailure = true;
+            MtbBirthyear.Size = new Size(279, 32);
+            MtbBirthyear.SkipLiterals = false;
+            MtbBirthyear.TabIndex = 2;
             // 
             // BtnCancel
             // 
@@ -134,9 +134,9 @@
             ClientSize = new Size(650, 151);
             Controls.Add(BtnCancel);
             Controls.Add(BtnSave);
-            Controls.Add(maskedTextBox2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(MtbBirthyear);
+            Controls.Add(txtNacionality);
+            Controls.Add(txtName);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -160,9 +160,9 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private MaskedTextBox maskedTextBox2;
+        private TextBox txtName;
+        private TextBox txtNacionality;
+        private MaskedTextBox MtbBirthyear;
         private Button BtnCancel;
         private Button BtnSave;
     }

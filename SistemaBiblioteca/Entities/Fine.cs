@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaBiblioteca
+namespace SistemaBiblioteca.Entities
 {
     public abstract class Fine
     {
-        public string IDFine {  get; set; }
+        public string IDFine { get; set; }
         public string IDLoan { get; set; }
         public decimal BaseAmount { get; set; }
         public decimal TotalFine { get; set; }

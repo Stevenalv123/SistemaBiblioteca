@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaBiblioteca
+namespace SistemaBiblioteca.Entities
 {
     public class FineDaysLate : Fine
     {
@@ -16,7 +16,7 @@ namespace SistemaBiblioteca
             DaysLate = daysLate;
             iDFine = GenerateIdFine();
         }
-        
+
         public override string GenerateIdFine()
         {
             return $"M{counterFines.ToString("D3")}";

@@ -185,7 +185,7 @@
             BtnAccept.Location = new Point(310, 227);
             BtnAccept.Name = "BtnAccept";
             BtnAccept.Size = new Size(133, 40);
-            BtnAccept.TabIndex = 5;
+            BtnAccept.TabIndex = 4;
             BtnAccept.Text = "Aceptar";
             BtnAccept.UseVisualStyleBackColor = false;
             BtnAccept.Click += BtnAccept_Click;
