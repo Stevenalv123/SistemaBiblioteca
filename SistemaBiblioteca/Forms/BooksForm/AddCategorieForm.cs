@@ -13,8 +13,8 @@ namespace SistemaBiblioteca.Forms.BooksForm
 {
     public partial class AddCategorieForm : Form
     {
-        private Queue<Categorie> categories;
-        public AddCategorieForm(Queue<Categorie> existingCategories)
+        private List<Categorie> categories;
+        public AddCategorieForm(List<Categorie> existingCategories)
         {
             InitializeComponent();
             categories = existingCategories;
@@ -31,7 +31,7 @@ namespace SistemaBiblioteca.Forms.BooksForm
             }
             else
             {
-                categories.Enqueue(new Categorie(name));
+                categories.Add(new Categorie(name));
                 MessageBox.Show("Categoria agregada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
                 this.Close();

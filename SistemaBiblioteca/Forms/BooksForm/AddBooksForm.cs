@@ -17,17 +17,39 @@ namespace SistemaBiblioteca.Forms.Books
         bool correctISBN;
         public List<Author> authors { get; set; }
         public List<Editorial> editorials { get; set; }
-        public Queue<Categorie> categories { get; set; }
-        public AddBooks()
+        public List<Categorie> categories { get; set; }
+        public List<Book> books { get; set; }
+        public AddBooks(List<Book> existingBooks)
         {
             InitializeComponent();
             authors = new List<Author>();
             editorials = new List<Editorial>();
-            categories = new Queue<Categorie>();
+            categories = new List<Categorie>();
+            books = existingBooks;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            string title = TxtTitle.Text;
+
+            List<Author> selectedAuthors = new List<Author>();
+            foreach (var item in CmbAuthors.SelectedItems)
+            {
+                if (item is Author selectedAuthor)
+                {
+                    selectedAuthors.Add(selectedAuthor);
+                }
+            }
+
+            Categorie categorie = CmbCategories.SelectedItem as Categorie;
+            string isbn = MtbISBN.Text;
+            Editorial editorial = CmbEditorial.SelectedItem as Editorial;
+            int yearPublication = int.Parse(MtbPublicationYear.Text);
+            int stock = int.Parse(MtbStock.Text);
+            State bookState = State.Disponible;
+
+            Book book = new Book(title, selectedAuthors, categorie, isbn, editorial, yearPublication, stock, bookState);
+            books.Add(book);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
