@@ -139,6 +139,7 @@
             BtnDevolutions.Text = "Prestamos y Devoluciones";
             BtnDevolutions.TextAlign = ContentAlignment.MiddleRight;
             BtnDevolutions.UseVisualStyleBackColor = false;
+            BtnDevolutions.Click += BtnDevolutions_Click;
             // 
             // IconPanel
             // 
